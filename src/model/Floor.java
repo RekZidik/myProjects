@@ -1,19 +1,16 @@
 package model;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by RekZidik on 01/12/2015.
+ * Created by RekZidik on 05/01/2016.
  */
-public class Student extends Model {
-    private String id;
-    @Override
-    public String getId() {
-        return id;
-    }
+public class Floor extends Model {
+
 
     @Override
-    public boolean fromJSON(JSONObject jsonObject) {
+    public boolean fromJSON(JSONObject jsonObject) throws JSONException {
         return false;
     }
 
@@ -22,10 +19,8 @@ public class Student extends Model {
         return null;
     }
 
-
     @Override
     public void printState() {
 
     }
-
 }
