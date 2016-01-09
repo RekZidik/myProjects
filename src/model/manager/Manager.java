@@ -71,6 +71,14 @@ public abstract class  Manager<T extends Model> extends Model{
         return list.stream();
     }
 
+    public boolean contains(String id){
+        return stream().filter(x->x.getId().equals(id)).count()>0;
+    }
+
+    public boolean contains(T model){
+        return list.contains(model);
+    }
+
     /**
      *@return an instance of Model object managed
      */

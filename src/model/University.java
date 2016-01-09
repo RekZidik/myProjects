@@ -2,6 +2,7 @@ package model;
 
 import model.manager.BlocksManager;
 import model.manager.FormationsManager;
+import model.manager.SlotsManager;
 import model.manager.TeachersManager;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,6 +17,7 @@ public class University extends Model{
     private BlocksManager blocks;
     private FormationsManager formations;
     private TeachersManager teachers;
+    private SlotsManager slots;
     private String name;
 
     private University() {
@@ -24,7 +26,7 @@ public class University extends Model{
         teachers = new TeachersManager();
     }
 
-<<<<<<< HEAD
+
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -35,8 +37,6 @@ public class University extends Model{
 
     }
 
-=======
->>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     public BlocksManager getBlocks() {
         return blocks;
     }
@@ -49,12 +49,17 @@ public class University extends Model{
         return teachers;
     }
 
+    public SlotsManager getSlots() {
+        return slots;
+    }
+
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        label = getString(jsonObject,"name","UPEC");
+        setLabel(getString(jsonObject,"name","UPEC"));
         blocks.fromJSONArray(getJSONArray(jsonObject,"blocks",blocks.toJSONArray()));
         formations.fromJSONArray(getJSONArray(jsonObject,"formations",formations.toJSONArray()));
         teachers.fromJSONArray(getJSONArray(jsonObject,"teachers",teachers.toJSONArray()));
+        slots.fromJSONArray(getJSONArray(jsonObject,"slots",slots.toJSONArray()));
         return true;
     }
 
@@ -65,6 +70,7 @@ public class University extends Model{
         data.put("blocks",blocks.toJSONArray());
         data.put("formations",formations.toJSONArray());
         data.put("teachers",teachers.toJSONArray());
+        data.put("slots",slots.toJSONArray());
         return data;
     }
 
@@ -83,11 +89,8 @@ public class University extends Model{
         );
     }
 
-<<<<<<< HEAD
+
     public static University getInstance(){
-=======
-    static University getInstance(){
->>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
         if(university == null){
             university = new University();
             return university;

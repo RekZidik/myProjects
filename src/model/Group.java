@@ -19,6 +19,17 @@ public class Group extends Model {
         this.type = type;
     }
 
+    public Group() {
+    }
+
+    public Module getModule() {
+        return module;
+    }
+
+    public int getType() {
+        return type;
+    }
+
     @Override
     public void setLabel(String label) {
         this.label = label;

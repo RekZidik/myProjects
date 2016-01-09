@@ -1,7 +1,11 @@
 package model;
 
+import model.manager.HallsHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Iterator;
+import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 05/01/2016.
@@ -9,12 +13,28 @@ import org.json.JSONObject;
 public class Floor extends Model {
 
     private Block block;
+    private HallsHandler halls;
 
     public Floor(String label,Block block) {
         this.label = block.getLabel().concat("_").concat(label);
         this.block = block;
     }
 
+    public Stream<Hall> hallStream(){
+        return halls.stream();
+    }
+
+    public boolean containsHall(String id){
+       return halls.contains(id);
+    }
+
+    public boolean containsHall(Hall hall){
+       return halls.contains(hall);
+    }
+
+    public Iterator<Hall> hallIterator(){
+        return halls.iterator();
+    }
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -22,6 +42,7 @@ public class Floor extends Model {
 
     @Override
     public void setId(String id) {
+        //TODO implementer une sureté sur le changement de ID
         this.id = id;
     }
 

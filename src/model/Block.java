@@ -10,13 +10,26 @@ import java.util.ArrayList;
  * Created by RekZidik on 05/01/2016.
  */
 public class Block extends Model {
-    FloorsHandler floors ;
+    private FloorsHandler floors ;
 
     public Block(String label) {
         this.label = label;
         this.floors = new FloorsHandler(this);
     }
 
+    public boolean containsHall(String id){
+        return floors.stream().filter(x->x.containsHall(id)).count()>0;
+    }
+    public boolean containsHall(Hall hall){
+        return floors.stream().filter(x->x.containsHall(hall)).count()>0;
+    }
+
+    public boolean containsFloor(String id){
+        return floors.stream().filter(x->x.containsHall(id)).count()>0;
+    }
+    public boolean containsFloor(Floor floor){
+        return floors.contains(floor);
+    }
 
     @Override
     public void setLabel(String label) {

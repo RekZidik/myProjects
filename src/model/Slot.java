@@ -29,6 +29,8 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().getSlots().contains(id))
+            id=generateId();
         this.id = id;
     }
 
@@ -81,7 +83,9 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
     @Override
     public boolean overlapWith(Slot other) {
-        return duration.overlapWith(other.getDuration())&& getGroup().equals(other.getGroup());
+        return duration.overlapWith(other.getDuration())
+                &&
+                getGroup().getId().equals(other.getGroup().getId());
     }
 
     public static class Duration extends Model implements OverlapCapacity<Duration>{
@@ -97,6 +101,9 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
                 this.begin = end;
                 this.end = begin;
             }
+        }
+
+        public Duration() {
         }
 
         public boolean overlapWith(Duration duration){

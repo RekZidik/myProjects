@@ -12,12 +12,17 @@ public class TDHall extends Hall {
         super(seanceType, capacity, projector, localisation);
     }
 
+    public TDHall() {
+    }
+
     public void setLabel(String label) {
         this.label = label;
     }
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().get().contains(id))
+            id=generateId();
         this.id = id;
     }
 

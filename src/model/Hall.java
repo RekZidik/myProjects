@@ -25,6 +25,9 @@ public abstract class Hall extends Model {
         this.localisation = localisation;
     }
 
+    public Hall() {
+    }
+
     public int getCapacity() {
         return capacity;
     }

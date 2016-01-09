@@ -32,6 +32,9 @@ public class TPHall extends Hall{
         return false;
     }
 
+    public TPHall() {
+    }
+
     @Override
     public JSONObject toJSON() {
         return null;

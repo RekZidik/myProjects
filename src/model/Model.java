@@ -14,8 +14,8 @@ public abstract class Model {
 
 
     public Model() {
-        this.id = generateId();
-        this.label = "Unknown";
+        setId(generateId());
+        setLabel("Unknown");
     }
 
     /**
