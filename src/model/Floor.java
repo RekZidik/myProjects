@@ -16,7 +16,6 @@ public class Floor extends Model {
     }
 
     @Override
-<<<<<<< HEAD
     public void setLabel(String label) {
         this.label = label;
     }
@@ -27,8 +26,6 @@ public class Floor extends Model {
     }
 
     @Override
-=======
->>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
         return false;
     }
