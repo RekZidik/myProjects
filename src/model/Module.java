@@ -10,30 +10,29 @@ import java.util.ArrayList;
  */
 public class Module extends Model implements ModuleOption {
     private static int nbrInstances;
-    private String label;
+    private Formation formation;
     private String nomination;
-    private String id;
     private boolean optional;
     private StudiesHours hours;
     private ArrayList<String> groupsTD;
-    private ArrayList<String> groupsTP;
 
-    public Module(String nomination, boolean optional, StudiesHours hours) {
+    public Module(Formation formation,String nomination, boolean optional, StudiesHours hours) {
+        this.formation = formation;
         this.nomination = nomination;
         this.label = generateLabel(nomination);
         this.optional = optional;
         this.hours = hours;
-        this.id = generateId();
         nbrInstances++;
+    }
 
+
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     @Override
-    public String getId() {
-        return id;
-    }
-
-    private void setId(String id){
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -91,7 +90,6 @@ public class Module extends Model implements ModuleOption {
     public JSONObject toJSON() {
         JSONObject data = new JSONObject();
         data.put("label", getLabel());
-
         data.put("id",getId());
         return data;
     }
@@ -101,7 +99,7 @@ public class Module extends Model implements ModuleOption {
 
     }
 
-    class StudiesHours extends Model{
+    public static class StudiesHours extends Model{
 
         private int TDHs;
         private int TPHs;
@@ -111,6 +109,16 @@ public class Module extends Model implements ModuleOption {
             this.TDHs = TDHs;
             this.TPHs = TPHs;
             CourHs = courHs;
+        }
+
+        @Override
+        public void setLabel(String label) {
+            this.label = label;
+        }
+
+        @Override
+        public void setId(String id) {
+            this.id = id;
         }
 
         public int getTDHs() {

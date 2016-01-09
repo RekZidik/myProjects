@@ -9,10 +9,10 @@ import org.json.JSONObject;
  * Created by RekZidik on 01/12/2015.
  */
 public abstract class Model {
-    String label;
-    String id;
+    protected String label;
+    protected String id;
 
-    public Model(String label) {
+    public Model() {
         this.id = generateId();
         this.label = "Unknown";
     }
@@ -24,6 +24,10 @@ public abstract class Model {
     public String getId() {
         return id;
     }
+
+    public abstract void setLabel(String label) ;
+
+    public abstract void setId(String id) ;
 
     /**
      *

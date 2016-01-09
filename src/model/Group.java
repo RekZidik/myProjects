@@ -4,12 +4,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by RekZidik on 01/12/2015.
+ * Created by RekZidik on 06/01/2016.
  */
-public class TDHall extends Hall {
+public class Group extends Model {
+    public static final int COUR_GROUP = 0;
+    public static final int TD_GROUP = 1;
+    public static final int TP_GROUP = 2;
 
-    public TDHall(int seanceType, int capacity, boolean projector, Floor localisation) {
-        super(seanceType, capacity, projector, localisation);
+    private Module module;
+    private int type;
+
+    public Group(Module module, int type) {
+        this.module = module;
+        this.type = type;
     }
 
     @Override
@@ -24,19 +31,16 @@ public class TDHall extends Hall {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        super.fromJSON(jsonObject);
         return false;
     }
 
     @Override
     public JSONObject toJSON() {
-        JSONObject data = super.toJSON();
-        return data;
+        return null;
     }
 
     @Override
     public void printState() {
-        super.printState();
 
     }
 }

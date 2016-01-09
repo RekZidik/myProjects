@@ -16,8 +16,17 @@ public abstract class  Manager<T extends Model> extends Model{
     private ArrayList<T> list;
 
     public Manager() {
-        super("");
         list= new ArrayList<>();
+    }
+
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
     }
 
     protected boolean _add(T m){
@@ -91,8 +100,8 @@ public abstract class  Manager<T extends Model> extends Model{
 
     @Override
     public void printState() {
-        System.out.println(getId());
-        System.out.println(length()+" items");
+        System.out.println(getLabel());
+        System.out.println(length()+" ".concat(getLabel()));
 
     }
 }

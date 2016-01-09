@@ -8,6 +8,22 @@ import org.json.JSONObject;
  */
 public class Floor extends Model {
 
+    private Block block;
+
+    public Floor(String label,Block block) {
+        this.label = block.getLabel().concat("_").concat(label);
+        this.block = block;
+    }
+
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {

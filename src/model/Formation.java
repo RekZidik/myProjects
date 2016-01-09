@@ -1,9 +1,10 @@
 package model;
 
+import model.manager.ModuleHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by RekZidik on 27/12/2015.
@@ -14,19 +15,25 @@ public class Formation extends Model{
     private String id;
     private String nomination;
     private int students;
-    private ArrayList<String> modules;
+    private ModuleHandler modules;
 
 
-    public Formation(String nomination, int students, ArrayList<String> modules) {
+    public Formation(String nomination, int students) {
         this.nomination = nomination;
         setStudents(students);
-        this.modules = modules;
+        this.modules = new ModuleHandler(this);
         this.label = generateLabel(nomination);
         this.id = generateId();
         nbrInstances++;
     }
 
-    private void setId(String id) {
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -48,13 +55,10 @@ public class Formation extends Model{
         this.students = students;
     }
 
-    public ArrayList<String> getModules() {
-        return modules;
+    public Iterator<Module> getModules() {
+        return modules.iterator();
     }
 
-    public void setModules(ArrayList<String> modules) {
-        this.modules = modules;
-    }
 
 
     private String generateLabel(String nomination){

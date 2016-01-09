@@ -5,7 +5,7 @@ import org.json.JSONObject;
 /**
  * Created by RekZidik on 01/12/2015.
  */
-public class Student extends Model {
+public abstract class Student extends Model {
     private String id;
     @Override
     public String getId() {

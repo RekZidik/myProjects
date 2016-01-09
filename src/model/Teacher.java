@@ -4,6 +4,7 @@ package model;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Object represent the teacher in our Model
@@ -18,17 +19,17 @@ public class Teacher extends Model {
         GRADES.add("Maître de conférence B");
         GRADES.add("Professeur");
     }
-    private String id;
+
     private String name;
     private String firstName;
     private String grade;
     private ArrayList<String> taughtModules;
 
-    public Teacher(String name, String firstName, String grade, ArrayList<String> taughtModules) {
+    public Teacher(String name, String firstName, String grade) {
         this.name = name;
         this.firstName = firstName;
         this.grade = grade;
-        this.taughtModules = taughtModules;
+        this.taughtModules = new ArrayList<>();
     }
 
     public Teacher() {
@@ -36,6 +37,16 @@ public class Teacher extends Model {
         this.firstName = "Do";
         this.grade = GRADES.get(0);
         this.taughtModules = new ArrayList<>();
+    }
+
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -50,13 +61,8 @@ public class Teacher extends Model {
         return grade;
     }
 
-    public ArrayList<String> getTaughtModules() {
-        return taughtModules;
-    }
-
-    @Override
-    public String getId() {
-        return id;
+    public Iterator<String> getTaughtModulesID() {
+        return taughtModules.iterator();
     }
 
     @Override
