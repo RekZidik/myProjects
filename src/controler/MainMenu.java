@@ -2,7 +2,6 @@ package controler;
 
 import model.University;
 
-import java.util.Optional;
 
 /**
  * Created by RekZidik on 07/01/2016.
@@ -15,8 +14,12 @@ public class MainMenu extends BaseController<University> {
         setHook(false);
     }
 
+
+
+
     @Override
-    protected void printMenu() {
+    public void printMenu() {
+        getModel().printState();
         System.out.println("1: Manage Formations.");
         System.out.println("2: Manage Teachers.");
         System.out.println("3: Manage Blocks.");
@@ -33,5 +36,6 @@ public class MainMenu extends BaseController<University> {
 
         }
         return false;
+
     }
 }

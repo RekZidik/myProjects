@@ -31,7 +31,7 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
     public void setId(String id) {
         this.id = id;
     }
-    
+
     public Duration getDuration() {
         return duration;
     }
@@ -129,7 +129,7 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
             }
         }
 
-        @Override
+
         public void setLabel(String label) {
             this.label = label;
         }

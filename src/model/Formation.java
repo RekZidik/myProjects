@@ -27,6 +27,7 @@ public class Formation extends Model{
         nbrInstances++;
     }
 
+
     @Override
     public void setLabel(String label) {
         this.label = label;

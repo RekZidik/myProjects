@@ -24,6 +24,7 @@ public class University extends Model{
         teachers = new TeachersManager();
     }
 
+<<<<<<< HEAD
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -34,6 +35,8 @@ public class University extends Model{
 
     }
 
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     public BlocksManager getBlocks() {
         return blocks;
     }
@@ -80,7 +83,11 @@ public class University extends Model{
         );
     }
 
+<<<<<<< HEAD
     public static University getInstance(){
+=======
+    static University getInstance(){
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
         if(university == null){
             university = new University();
             return university;

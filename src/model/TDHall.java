@@ -12,7 +12,6 @@ public class TDHall extends Hall {
         super(seanceType, capacity, projector, localisation);
     }
 
-    @Override
     public void setLabel(String label) {
         this.label = label;
     }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffe5ab65-ff22-467a-bb1d-b4fd1cbd23a7" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SchedulerApp.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controler/BaseController.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controler/MainMenu.java" />
@@ -28,6 +29,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/TPHall.java" afterPath="$PROJECT_DIR$/src/model/TPHall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Teacher.java" afterPath="$PROJECT_DIR$/src/model/Teacher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/manager/Manager.java" afterPath="$PROJECT_DIR$/src/model/manager/Manager.java" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Slot.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/manager/ModuleManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Block.java" afterPath="$PROJECT_DIR$/src/model/Block.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Floor.java" afterPath="$PROJECT_DIR$/src/model/Floor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Model.java" afterPath="$PROJECT_DIR$/src/model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Module.java" afterPath="$PROJECT_DIR$/src/model/Module.java" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     </list>
     <ignored path="groupe21.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,6 +60,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="Slot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Slot.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +78,23 @@
                 <element signature="e#2987#2988#0" expanded="true" />
                 <element signature="e#3045#3046#0" expanded="true" />
                 <element signature="e#3081#3082#0" expanded="true" />
+=======
+      <file leaf-file-name="Slot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Slot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Group.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Group.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,11 +105,23 @@
                 <element signature="e#530#531#0" expanded="true" />
                 <element signature="e#580#581#0" expanded="true" />
                 <element signature="e#608#609#0" expanded="true" />
+=======
+      <file leaf-file-name="TPHall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/TPHall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Teacher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Teacher.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,11 +132,21 @@
                 <element signature="e#1092#1093#0" expanded="true" />
                 <element signature="e#1142#1143#0" expanded="true" />
                 <element signature="e#1170#1171#0" expanded="true" />
+=======
+      <file leaf-file-name="TDHall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/TDHall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Floor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +157,25 @@
                 <element signature="e#416#417#0" expanded="true" />
                 <element signature="e#466#467#0" expanded="true" />
                 <element signature="e#494#495#0" expanded="true" />
+=======
+      <file leaf-file-name="Hall.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Hall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="73" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#1293#1294#0" expanded="true" />
+                <element signature="e#1320#1321#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Block.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,20 +187,45 @@
                 <element signature="e#503#504#0" expanded="true" />
                 <element signature="e#531#532#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Teacher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Teacher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+              <folding />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Student.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
+=======
+      <file leaf-file-name="University.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/University.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+              <folding>
+                <element signature="e#656#657#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+              </folding>
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TPHall.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/TPHall.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,11 +237,22 @@
                 <element signature="e#598#599#0" expanded="true" />
                 <element signature="e#648#649#0" expanded="true" />
                 <element signature="e#676#677#0" expanded="true" />
+=======
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controler/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.58219177">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <element signature="e#214#215#0" expanded="true" />
+                <element signature="e#254#255#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TDHall.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/TDHall.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -169,11 +264,24 @@
                 <element signature="e#403#404#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
                 <element signature="e#481#482#0" expanded="true" />
+=======
+      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controler/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#443#444#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Formation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,6 +293,14 @@
                 <element signature="e#848#849#0" expanded="true" />
                 <element signature="e#876#877#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controler/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
             </state>
           </provider>
         </entry>
@@ -193,6 +309,7 @@
         <entry file="file://$PROJECT_DIR$/src/model/Module.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
               <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -204,6 +321,11 @@
                 <element signature="e#2726#2727#0" expanded="true" />
                 <element signature="e#2784#2785#0" expanded="true" />
                 <element signature="e#2820#2821#0" expanded="true" />
+=======
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
               </folding>
             </state>
           </provider>
@@ -241,11 +363,16 @@
         <option value="$PROJECT_DIR$/src/utils/json/JSONString.java" />
         <option value="$PROJECT_DIR$/src/utils/json/JSONML.java" />
         <option value="$PROJECT_DIR$/src/utils/json/XMLTokener.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/model/Student.java" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
         <option value="$PROJECT_DIR$/src/model/Manager.java" />
         <option value="$PROJECT_DIR$/src/model/manager/TeachersManager.java" />
         <option value="$PROJECT_DIR$/src/controler/Controler.java" />
         <option value="$PROJECT_DIR$/src/model/manager/Block.java" />
         <option value="$PROJECT_DIR$/src/model/ModuleOption.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/model/manager/ModuleManager.java" />
         <option value="$PROJECT_DIR$/src/model/OverlapCapacity.java" />
         <option value="$PROJECT_DIR$/src/model/manager/FloorsHandler.java" />
@@ -272,6 +399,31 @@
         <option value="$PROJECT_DIR$/src/model/TDHall.java" />
         <option value="$PROJECT_DIR$/src/model/Floor.java" />
         <option value="$PROJECT_DIR$/src/model/Slot.java" />
+=======
+        <option value="$PROJECT_DIR$/src/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/model/Floor.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/ModuleManager.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/Manager.java" />
+        <option value="$PROJECT_DIR$/src/model/OverlapCapacity.java" />
+        <option value="$PROJECT_DIR$/src/model/Group.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/FloorsHandler.java" />
+        <option value="$PROJECT_DIR$/src/model/Block.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/BlocksManager.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/ModuleHandler.java" />
+        <option value="$PROJECT_DIR$/src/model/Formation.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/FormationsManager.java" />
+        <option value="$PROJECT_DIR$/src/model/Module.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/GroupHandler.java" />
+        <option value="$PROJECT_DIR$/src/model/Slot.java" />
+        <option value="$PROJECT_DIR$/src/model/TPHall.java" />
+        <option value="$PROJECT_DIR$/src/model/Hall.java" />
+        <option value="$PROJECT_DIR$/src/model/TDHall.java" />
+        <option value="$PROJECT_DIR$/src/model/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/controler/Controller.java" />
+        <option value="$PROJECT_DIR$/src/controler/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/model/University.java" />
+        <option value="$PROJECT_DIR$/src/controler/MainMenu.java" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
       </list>
     </option>
   </component>
@@ -421,6 +573,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.SchedulerApp">
     <configuration default="false" name="SchedulerApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -437,6 +590,9 @@
       <envs />
       <method />
     </configuration>
+=======
+  <component name="RunManager">
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -897,6 +1053,7 @@
       <envs />
       <method />
     </configuration>
+<<<<<<< HEAD
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.SchedulerApp" />
     </list>
@@ -905,6 +1062,8 @@
         <item index="0" class="java.lang.String" itemvalue="Application.SchedulerApp" />
       </list>
     </recent_temporary>
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -925,25 +1084,42 @@
       <workItem from="1449132970770" duration="357000" />
       <workItem from="1451042187816" duration="20396000" />
       <workItem from="1451929573466" duration="12869000" />
+<<<<<<< HEAD
       <workItem from="1452101231829" duration="32668000" />
+=======
+      <workItem from="1452101231829" duration="20971000" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="74437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+=======
+    <option name="totallyTimeSpent" value="62740000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -952,14 +1128,24 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -982,6 +1168,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2898#2899#0" expanded="true" />
+            <element signature="e#2933#2934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     <entry file="file://$PROJECT_DIR$/src/model/ModuleOption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1032,8 +1263,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#200#201#0" expanded="false" />
             <element signature="e#225#226#0" expanded="false" />
+=======
+            <element signature="e#191#192#0" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1051,7 +1287,11 @@
           <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="false" />
+<<<<<<< HEAD
             <element signature="e#390#391#0" expanded="true" />
+=======
+            <element signature="e#390#391#0" expanded="false" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1062,6 +1302,7 @@
           <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#781#782#0" expanded="true" />
             <element signature="e#815#816#0" expanded="true" />
             <element signature="e#865#866#0" expanded="true" />
@@ -1070,6 +1311,8 @@
             <element signature="e#2726#2727#0" expanded="true" />
             <element signature="e#2784#2785#0" expanded="true" />
             <element signature="e#2820#2821#0" expanded="true" />
+=======
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1138,8 +1381,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#200#201#0" expanded="false" />
             <element signature="e#225#226#0" expanded="false" />
+=======
+            <element signature="e#191#192#0" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1174,8 +1422,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#200#201#0" expanded="false" />
             <element signature="e#225#226#0" expanded="false" />
+=======
+            <element signature="e#191#192#0" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1202,6 +1455,20 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#191#192#0" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
     <entry file="jar://$PROJECT_DIR$/src/utils/json/json-20151123.jar!/org/json/JSONArray.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34829444">
@@ -1243,6 +1510,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/OverlapCapacity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1265,10 +1533,30 @@
             <element signature="e#482#483#0" expanded="false" />
             <element signature="e#534#535#0" expanded="false" />
             <element signature="e#567#568#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/manager/BlocksManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1293,10 +1581,27 @@
             <element signature="e#291#292#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/OverlapCapacity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/manager/GroupHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1313,10 +1618,19 @@
             <element signature="e#516#517#0" expanded="false" />
             <element signature="e#568#569#0" expanded="false" />
             <element signature="e#596#597#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="73" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Hall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1327,10 +1641,27 @@
             <element signature="e#868#869#0" expanded="true" />
             <element signature="e#1293#1294#0" expanded="true" />
             <element signature="e#1320#1321#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/manager/FloorsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/controler/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1345,20 +1676,54 @@
           <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/manager/BlocksManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/manager/ModuleHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/SchedulerApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/University.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1372,18 +1737,39 @@
             <element signature="e#913#914#0" expanded="true" />
             <element signature="e#957#958#0" expanded="true" />
             <element signature="e#988#989#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/manager/FormationsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/controler/ManageFormationsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1424,10 +1810,29 @@
             <element signature="e#225#226#0" expanded="true" />
             <element signature="e#472#473#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/manager/GroupHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1439,10 +1844,21 @@
             <element signature="e#480#481#0" expanded="true" />
             <element signature="e#530#531#0" expanded="true" />
             <element signature="e#558#559#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/TPHall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1452,10 +1868,23 @@
             <element signature="e#1092#1093#0" expanded="true" />
             <element signature="e#1142#1143#0" expanded="true" />
             <element signature="e#1170#1171#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Hall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="73" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Group.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1465,10 +1894,19 @@
             <element signature="e#530#531#0" expanded="true" />
             <element signature="e#580#581#0" expanded="true" />
             <element signature="e#608#609#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/TDHall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1478,6 +1916,16 @@
             <element signature="e#798#799#0" expanded="true" />
             <element signature="e#848#849#0" expanded="true" />
             <element signature="e#876#877#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
@@ -1485,6 +1933,7 @@
     <entry file="file://$PROJECT_DIR$/src/model/Module.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1509,18 +1958,31 @@
             <element signature="e#453#454#0" expanded="true" />
             <element signature="e#503#504#0" expanded="true" />
             <element signature="e#531#532#0" expanded="true" />
+=======
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/TPHall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1545,10 +2007,30 @@
             <element signature="e#403#404#0" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
             <element signature="e#481#482#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/controler/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Floor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1558,10 +2040,24 @@
             <element signature="e#416#417#0" expanded="true" />
             <element signature="e#466#467#0" expanded="true" />
             <element signature="e#494#495#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/model/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/model/Slot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3942559">
@@ -1578,6 +2074,15 @@
             <element signature="e#2987#2988#0" expanded="true" />
             <element signature="e#3045#3046#0" expanded="true" />
             <element signature="e#3081#3082#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/controler/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58219177">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+>>>>>>> f956641b0c5eb345a5a7b9469a7e055f7370b5fc
           </folding>
         </state>
       </provider>

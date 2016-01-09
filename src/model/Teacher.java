@@ -49,6 +49,7 @@ public class Teacher extends Model {
         this.id = id;
     }
 
+
     public String getName() {
         return name;
     }

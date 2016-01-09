@@ -12,6 +12,7 @@ public abstract class Model {
     protected String label;
     protected String id;
 
+
     public Model() {
         this.id = generateId();
         this.label = "Unknown";
@@ -28,6 +29,7 @@ public abstract class Model {
     public abstract void setLabel(String label) ;
 
     public abstract void setId(String id) ;
+
 
     /**
      *
