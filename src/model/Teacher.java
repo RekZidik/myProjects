@@ -46,6 +46,8 @@ public class Teacher extends Model {
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().getTeachers().contains(id))
+            id=generateId();
         this.id = id;
     }
 

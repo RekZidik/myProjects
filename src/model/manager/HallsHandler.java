@@ -4,11 +4,15 @@ import model.Floor;
 import model.Hall;
 import model.TDHall;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
 /**
  * Created by RekZidik on 09/01/2016.
  */
 public class HallsHandler extends Manager<Hall> {
     private Floor floor;
+
 
     public HallsHandler(Floor floor) {
         this.floor = floor;

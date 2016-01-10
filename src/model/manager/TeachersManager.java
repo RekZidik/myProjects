@@ -1,18 +1,15 @@
 package model.manager;
 
 import model.Teacher;
+import model.University;
 
 /**
  * Created by RekZidik on 27/12/2015.
  */
 public class TeachersManager extends Manager<Teacher> {
-    @Override
-    public String getId() {
-        return null;
-    }
 
-    public String getLabel() {
-        return null;
+    public TeachersManager() {
+        label = "Teachers";
     }
 
     @Override
@@ -27,6 +24,16 @@ public class TeachersManager extends Manager<Teacher> {
 
     @Override
     public boolean remove(Teacher m) {
-        return _remove(m);
+        return University.getInstance().getSlots().stream(m).count() <= 0 && _remove(m);
+    }
+
+    @Override
+    public void printGlobalStat() {
+        super.printGlobalStat();
+        System.out.println("Naming Grades");
+        for (String e :
+                Teacher.GRADES) {
+            System.out.println(e);
+        }
     }
 }

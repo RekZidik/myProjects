@@ -6,16 +6,19 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 26/12/2015.
  */
 public abstract class  Manager<T extends Model> extends Model{
-
+    private boolean flag = false;
     private ArrayList<T> list;
 
+
     public Manager() {
+        super();
         list= new ArrayList<>();
     }
 
@@ -29,12 +32,12 @@ public abstract class  Manager<T extends Model> extends Model{
         this.id = id;
     }
 
-    protected boolean _add(T m){
-        return list.add(m);
+    protected boolean _add(T m) {
+        return m != null && list.add(m);
     }
 
     protected boolean _remove(T m){
-        return list.remove(m);
+        return m != null && list.remove(m);
     }
 
     /**
@@ -96,6 +99,26 @@ public abstract class  Manager<T extends Model> extends Model{
      */
     public abstract boolean remove(T m);
 
+    public boolean remove(Stream<T> stream){
+        flag = false;
+        stream.forEach(x->flag &= remove(x));
+        return !flag;
+    }
+
+    public boolean add(Stream<T> stream){
+        flag = false;
+        stream.forEach(x->flag &= add(x));
+        return !flag;
+    }
+
+    public Optional<T> get(String id){
+        for (T e: list) {
+            if (e.getId().equals(id))
+                return Optional.of(e);
+        }
+        return Optional.empty();
+    }
+
     @Override
     public boolean fromJSON(JSONObject jsonObject) {
         return false;
@@ -106,10 +129,13 @@ public abstract class  Manager<T extends Model> extends Model{
         return null;
     }
 
+    public void printGlobalStat(){
+        //System.out.println(getLabel());
+        System.out.println(getLabel().concat(" ".concat(String.valueOf(length()))));
+    }
+
     @Override
     public void printState() {
-        System.out.println(getLabel());
-        System.out.println(length()+" ".concat(getLabel()));
-
+        stream().forEach(Model::printState);
     }
 }

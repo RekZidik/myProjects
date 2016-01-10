@@ -1,9 +1,11 @@
 package model;
 
+import model.manager.GroupHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 26/12/2015.
@@ -14,7 +16,8 @@ public class Module extends Model implements ModuleOption {
     private String nomination;
     private boolean optional;
     private StudiesHours hours;
-    private ArrayList<String> groupsTD;
+    private GroupHandler groups;
+    private int students;
 
     public Module(Formation formation,String nomination, boolean optional, StudiesHours hours) {
         this.formation = formation;
@@ -22,6 +25,7 @@ public class Module extends Model implements ModuleOption {
         this.label = generateLabel(nomination);
         this.optional = optional;
         this.hours = hours;
+        this.groups = new GroupHandler(this);
         nbrInstances++;
     }
 
@@ -33,7 +37,17 @@ public class Module extends Model implements ModuleOption {
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().getFormations().containsModule(id))
+            id=generateId();
         this.id = id;
+    }
+
+    public boolean contains(Group group){
+        return groups.contains(group);
+    }
+
+    public boolean containsGroup(String id){
+        return groups.contains(id);
     }
 
     private String generateLabel(String label){
@@ -46,14 +60,6 @@ public class Module extends Model implements ModuleOption {
                 id=id.concat(st.toUpperCase()).concat("_");
         }
         return id.concat(String.valueOf(nbrInstances));
-    }
-
-    public ArrayList<String> getGroupsTD() {
-        return groupsTD;
-    }
-
-    public void setGroupsTD(ArrayList<String> groupsTD) {
-        this.groupsTD = groupsTD;
     }
 
     public String getNomination() {
@@ -69,8 +75,20 @@ public class Module extends Model implements ModuleOption {
         return optional;
     }
 
+    public Stream<Group> stream(){
+        return groups.stream();
+    }
+
+    public Iterator<Group > iterator(){
+        return groups.iterator();
+    }
+
     public void setOptional(boolean optional) {
         this.optional = optional;
+    }
+
+    public Formation getFormation() {
+        return formation;
     }
 
     @Override

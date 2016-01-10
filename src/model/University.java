@@ -24,6 +24,7 @@ public class University extends Model{
         blocks = new BlocksManager();
         formations = new FormationsManager();
         teachers = new TeachersManager();
+        slots = new SlotsManager();
     }
 
 
@@ -78,9 +79,9 @@ public class University extends Model{
     public void printState() {
 
         System.out.println(getLabel());
-        System.out.print("Formations : ");System.out.println(getFormations().length());
-        System.out.print("Blocks : ");System.out.println(getBlocks().length());
-        System.out.print("Teachers : ");System.out.println(getTeachers().length());
+        System.out.print("Formations : ".concat(String.valueOf(getFormations().length())));
+        System.out.print("Blocks : ".concat(String.valueOf(getBlocks().length())));
+        System.out.print("Teachers : ".concat(String.valueOf(getTeachers().length())));
         System.out.print("Students : ");
         System.out.println(
                         getFormations()

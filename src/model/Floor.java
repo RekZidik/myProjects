@@ -18,9 +18,17 @@ public class Floor extends Model {
     public Floor(String label,Block block) {
         this.label = block.getLabel().concat("_").concat(label);
         this.block = block;
+        this.halls = new HallsHandler(this);
     }
 
-    public Stream<Hall> hallStream(){
+    public Floor() {
+    }
+
+    public Block getBlock() {
+        return block;
+    }
+
+    public Stream<Hall> streamHalls(){
         return halls.stream();
     }
 
@@ -42,7 +50,8 @@ public class Floor extends Model {
 
     @Override
     public void setId(String id) {
-        //TODO implementer une sureté sur le changement de ID
+        while (University.getInstance().getBlocks().containsFloor(id))
+            id=generateId();
         this.id = id;
     }
 

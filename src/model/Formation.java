@@ -5,6 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 27/12/2015.
@@ -18,15 +19,38 @@ public class Formation extends Model{
     private ModuleHandler modules;
 
 
-    public Formation(String nomination, int students) {
+    public Formation(String nomination, String students) {
         this.nomination = nomination;
-        setStudents(students);
+        setStudents(Integer.valueOf(students));
         this.modules = new ModuleHandler(this);
         this.label = generateLabel(nomination);
-        this.id = generateId();
+        setId(generateId());
         nbrInstances++;
     }
 
+    public boolean contains(Group group){
+        return modules.contains(group);
+    }
+
+    public boolean contains(Module module){
+        return modules.contains(module);
+    }
+
+    public Iterator<Module> iterator() {
+        return modules.iterator();
+    }
+
+    public Stream<Module> stream(){
+        return modules.stream();
+    }
+
+    public boolean containsGroup(String id){
+        return modules.containsGroup(id);
+    }
+
+    public boolean containsModule(String id){
+        return modules.contains(id);
+    }
 
     @Override
     public void setLabel(String label) {
@@ -35,10 +59,12 @@ public class Formation extends Model{
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().getFormations().contains(id))
+            id=generateId();
         this.id = id;
     }
 
-    public String getLabel() {
+    public String getNomination() {
         return nomination;
     }
 
@@ -55,12 +81,6 @@ public class Formation extends Model{
 
         this.students = students;
     }
-
-    public Iterator<Module> getModules() {
-        return modules.iterator();
-    }
-
-
 
     private String generateLabel(String nomination){
         String[] tab = nomination.split(" ");
@@ -91,6 +111,7 @@ public class Formation extends Model{
 
     @Override
     public void printState() {
-
+        System.out.println("References :".concat(getId()));
+        System.out.println("Nomination :".concat(getNomination()).concat(" Students:").concat(String.valueOf(getStudents())));
     }
 }

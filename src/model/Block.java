@@ -4,7 +4,8 @@ import model.manager.FloorsHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 05/01/2016.
@@ -17,18 +18,36 @@ public class Block extends Model {
         this.floors = new FloorsHandler(this);
     }
 
-    public boolean containsHall(String id){
-        return floors.stream().filter(x->x.containsHall(id)).count()>0;
+    public Optional<Hall> getHall(String id){
+        return floors.getHall(id);
     }
-    public boolean containsHall(Hall hall){
-        return floors.stream().filter(x->x.containsHall(hall)).count()>0;
+
+    public Stream<Hall> streamHall(){
+        return floors.streamHalls();
+    }
+
+    public Stream<Floor> streamFloors(){
+        return floors.stream();
+    }
+
+    public Stream<Hall> streamHalls(){
+        return floors.stream().flatMap(Floor::streamHalls);
     }
 
     public boolean containsFloor(String id){
-        return floors.stream().filter(x->x.containsHall(id)).count()>0;
+        return floors.contains(id);
     }
-    public boolean containsFloor(Floor floor){
+
+    public boolean contains(Floor floor){
         return floors.contains(floor);
+    }
+
+    public boolean containsHall(String id){
+        return floors.stream().filter(x->x.containsHall(id)).findFirst().isPresent();
+    }
+
+    public boolean contains(Hall hall){
+        return floors.stream().filter(x->x.containsHall(hall)).findFirst().isPresent();
     }
 
     @Override
@@ -38,6 +57,8 @@ public class Block extends Model {
 
     @Override
     public void setId(String id) {
+        while (University.getInstance().getBlocks().contains(id))
+            id=generateId();
         this.id = id;
     }
 
@@ -53,6 +74,6 @@ public class Block extends Model {
 
     @Override
     public void printState() {
-
+        System.out.println(label);
     }
 }

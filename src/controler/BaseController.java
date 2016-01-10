@@ -1,6 +1,7 @@
 package controler;
 
 import model.Model;
+import model.manager.Manager;
 
 import java.util.Optional;
 import java.util.Scanner;
@@ -16,11 +17,15 @@ public abstract class BaseController<T extends Model> implements Controller {
     private Optional<Controller> father;
     private T model;
     private boolean hook;
+    private String regexResponse;
+    protected Matcher matcher;
+
 
     public BaseController(Controller father, T model) {
         this.father = Optional.ofNullable(father);
         this.model = model;
-        hook = true;
+        this.hook = true;
+        this.regexResponse = "^\\d$";
     }
 
     @Override
@@ -32,24 +37,31 @@ public abstract class BaseController<T extends Model> implements Controller {
         return model;
     }
 
+    protected void setRegexResponse(String regexResponse){
+        this.regexResponse = regexResponse;
+    }
+
     @Override
-    public void interact() {
-        getModel().printState();
+    public final void interact() {
+        printStatModel();
         printMenu();
         if(hook)
             System.out.println("0: Previous.");
-        Pattern pattern = Pattern.compile("^\\d$");
+        Pattern pattern = Pattern.compile(regexResponse);
         Scanner scanner = new Scanner(System.in);
         String input;
-        Matcher matcher;
         boolean result = false;
         while (!result){
             input = scanner.nextLine();
             matcher = pattern.matcher(input);
-            result = matcher.find() && consume(Integer.valueOf(input));
-            printErrorMessage();
+            result = matcher.find() && consume(input);
+            if (!result)
+                printErrorMessage();
         }
-
+        if (getFather().isPresent())
+            getFather().get().interact();
+        else
+            interact();
     }
 
     protected void setHook(boolean hook){
@@ -59,15 +71,28 @@ public abstract class BaseController<T extends Model> implements Controller {
     protected abstract void printMenu() ;
 
 
-    private boolean consume(int response) {
-        if (response == BACK_INPUT && getFather().isPresent())
+    private boolean consume(String response) {
+        if (matcher.groupCount()== 0 && Integer.valueOf(response) == BACK_INPUT && getFather().isPresent())
             getFather().get().interact();
         return interact(response);
     }
 
-    protected abstract boolean interact(int response);
+    protected abstract boolean interact(String response);
 
     protected void printErrorMessage(){
         System.out.println("Incorrect Input! Retry");
+    }
+
+    protected void printSuccessMessage(){
+        System.out.println("Operation performed");
+    }
+
+    protected void printStatModel(){
+        getModel().printState();
+    }
+
+    protected <S extends Model>String getNameModel(Manager<S> manager){
+        String[] name = manager.getModelInstance().getClass().getName().split("\\.");
+        return name[name.length-1];
     }
 }

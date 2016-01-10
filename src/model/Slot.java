@@ -66,6 +66,18 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
         this.hall = hall;
     }
 
+    public Module getModule(){
+        return getGroup().getModule();
+    }
+
+    public Floor getFloor(){
+        return getHall().getLocalisation();
+    }
+
+    public Block getBlock(){
+        return getHall().getLocalisation().getBlock();
+    }
+
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
         return false;
@@ -78,6 +90,11 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
     @Override
     public void printState() {
+        duration.printState();
+        System.out.print("/Teacher :".concat(getTeacher().getName()));
+        System.out.print("/Group :".concat(Group.translateType(getGroup().getType())).concat(String.valueOf(getGroup().getIndex())));
+        System.out.print("/Formation :".concat(getGroup().getFormation().getNomination()));
+        System.out.print("/Hall :".concat(String.valueOf(getHall().getLabel())));
 
     }
 
@@ -158,7 +175,7 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
         @Override
         public void printState() {
-
+            System.out.print(begin+"-->"+end);
         }
     }
 }

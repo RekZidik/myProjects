@@ -1,5 +1,7 @@
 package controler;
 
+import model.Block;
+import model.Teacher;
 import model.University;
 
 
@@ -19,7 +21,7 @@ public class MainMenu extends BaseController<University> {
 
     @Override
     public void printMenu() {
-        getModel().printState();
+        //getModel().printState();
         System.out.println("1: Manage Formations.");
         System.out.println("2: Manage Teachers.");
         System.out.println("3: Manage Blocks.");
@@ -28,11 +30,34 @@ public class MainMenu extends BaseController<University> {
 
 
 
-    protected boolean interact(int response) {
-        switch (response){
+    protected boolean interact(String response) {
+        switch (Integer.valueOf(response)){
             case 1:
-                (new ManageFormationsController(this,getModel().getFormations())).interact();
+                (new ManageModelsController<>(
+                        this,
+                        getModel().getFormations(),
+                        new AddModelController.ConfigDisplay("^([\\w\\s]+/[\\d]+)|([\\d])$","Formation naming/Students","/"))
+                ).interact();
                 return true;
+
+            case 2:
+                (new ManageModelsController<>(
+                        this,
+                        getModel().getTeachers(),
+                        new AddModelController.ConfigDisplay("^(([\\w\\s]+/){2}[\\w\\s]+)|([\\d])$","Name/First name/Grade","/"))
+                ).interact();
+                return true;
+            case 3:
+                (new ManageModelsController<>(
+                        this,
+                        getModel().getBlocks(),
+                        new AddModelController.ConfigDisplay("^([\\w\\s]+)|([\\d])$","Label","/"))
+                ).interact();
+                return true;
+            case 4:
+                (new ManageSlotsController(this,getModel().getSlots())).interact();
+                return true;
+
 
         }
         return false;

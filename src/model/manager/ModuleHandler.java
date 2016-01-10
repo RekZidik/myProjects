@@ -1,6 +1,7 @@
 package model.manager;
 
 import model.Formation;
+import model.Group;
 import model.Module;
 
 /**
@@ -12,6 +13,14 @@ public class ModuleHandler extends Manager<Module>{
 
     public ModuleHandler(Formation formation) {
         this.formation = formation;
+    }
+
+    public boolean contains(Group group){
+        return stream().filter(x->x.contains(group)).count()>0;
+    }
+
+    public boolean containsGroup(String id){
+        return stream().filter(x->x.containsGroup(id)).count()>0;
     }
 
     @Override

@@ -2,6 +2,11 @@ package model.manager;
 
 import model.Block;
 import model.Floor;
+import model.Hall;
+
+import java.util.Optional;
+import java.util.StringJoiner;
+import java.util.stream.Stream;
 
 /**
  * Created by RekZidik on 07/01/2016.
@@ -11,6 +16,14 @@ public class FloorsHandler extends Manager<Floor> {
 
     public FloorsHandler(Block block) {
         this.block = block;
+    }
+
+    public Stream<Hall> streamHalls(){
+        return stream().flatMap(Floor::streamHalls);
+    }
+
+    public Optional<Hall> getHall(String id){
+        return streamHalls().filter(x->x.getId().equals(id)).findFirst();
     }
 
     @Override

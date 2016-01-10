@@ -20,16 +20,16 @@ public class GroupHandler extends Manager<Group> {
 
     @Override
     public Group getModelInstance() {
-        return new Group(module,Group.COUR_GROUP);
+        return new Group(module,Group.COUR_GROUP,length());
     }
 
     @Override
     public boolean add(Group m) {
-        return false;
+        return _add(m);
     }
 
     @Override
     public boolean remove(Group m) {
-        return false;
+        return _remove(m);
     }
 }
