@@ -1,6 +1,7 @@
 package model;
 
 import model.manager.FloorsHandler;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -64,6 +65,9 @@ public class Block extends Model {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        floors.fromJSONArray(getJSONArray(jsonObject,"floors",new JSONArray()));
         return false;
     }
 

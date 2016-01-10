@@ -3,6 +3,8 @@ package model;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -80,12 +82,25 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        return false;
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        teacher = University.getInstance().getTeachers().get(getString(jsonObject,"teacher","")).get();
+        group = University.getInstance().getFormations().getGroup(getString(jsonObject,"teacher","")).get();
+        hall = University.getInstance().getBlocks().getHall(getString(jsonObject,"teacher","")).get();
+        duration.fromJSON(getJSONObject(jsonObject,"duration",new JSONObject()));
+        return true;
     }
 
     @Override
     public JSONObject toJSON() {
-        return null;
+        JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("teacher",teacher.getId());
+        data.put("group",group.getId());
+        data.put("hall",hall.getId());
+        data.put("duration",duration.toJSON());
+        return data;
     }
 
     @Override
@@ -106,6 +121,8 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
     }
 
     public static class Duration extends Model implements OverlapCapacity<Duration>{
+        private String endText;
+        private String beginText;
         private Date begin;
         private Date end;
 
@@ -165,12 +182,24 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
 
         @Override
         public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-            return false;
+            try {
+                end = new SimpleDateFormat("yyyy/MM/dd hh:mm").parse(getString(jsonObject,"end","2050/01/01 20:00"));
+                endText = getString(jsonObject,"end","2050/01/01 20:00");
+                begin = new SimpleDateFormat("yyyy/MM/dd hh:mm").parse(getString(jsonObject,"begin","2000/01/01 20:00"));
+                beginText = getString(jsonObject,"begin","2000/01/01 20:00");
+            } catch (ParseException e) {
+                e.printStackTrace();
+                return false;
+            }
+            return true;
         }
 
         @Override
         public JSONObject toJSON() {
-            return null;
+            JSONObject data = new JSONObject();
+            data.put("begin",beginText);
+            data.put("end",endText);
+            return data;
         }
 
         @Override

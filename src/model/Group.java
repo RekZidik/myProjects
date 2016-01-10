@@ -71,12 +71,23 @@ public class Group extends Model {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        return false;
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        module = University.getInstance().getFormations().getModule(getString(jsonObject,"module","")).get();
+        type = getInt(jsonObject,"type",COUR_GROUP);
+        index = getInt(jsonObject,"index",COUR_GROUP);
+        return true;
     }
 
     @Override
     public JSONObject toJSON() {
-        return null;
+        JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("module",module.toJSON());
+        data.put("type",type);
+        data.put("index",index);
+        return data;
     }
 
     @Override

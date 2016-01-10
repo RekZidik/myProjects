@@ -5,8 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Is the base classWork of our Model
- * Created by RekZidik on 01/12/2015.
+ * "Model" is the base class to inherit all of the Model objects.
  */
 public abstract class Model {
     protected String label;
@@ -20,7 +19,7 @@ public abstract class Model {
 
     /**
      *
-     * @return Unique private identifier of object
+     * @return Unique identifier of object
      */
     public String getId() {
         return id;

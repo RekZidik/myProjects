@@ -1,6 +1,7 @@
 package model;
 
 import model.manager.HallsHandler;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -57,12 +58,21 @@ public class Floor extends Model {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        return false;
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        block.fromJSON(getJSONObject(jsonObject,"block",new JSONObject()));
+        halls.fromJSONArray(getJSONArray(jsonObject,"halls",new JSONArray()));
+        return true;
     }
 
     @Override
     public JSONObject toJSON() {
-        return null;
+        JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("block",block.toJSON());
+        data.put("halls",halls.toJSONArray());
+        return data;
     }
 
     @Override

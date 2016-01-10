@@ -1,6 +1,7 @@
 package model;
 
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -14,9 +15,9 @@ public class Teacher extends Model {
     public static ArrayList<String> GRADES;
     static {
         GRADES=new ArrayList<>();
-        GRADES.add("Maître assistant");
-        GRADES.add("Maître de conférence A");
-        GRADES.add("Maître de conférence B");
+        GRADES.add("Maitre assistant");
+        GRADES.add("Maitre de conference A");
+        GRADES.add("Maitre de conference B");
         GRADES.add("Professeur");
     }
 
@@ -70,12 +71,32 @@ public class Teacher extends Model {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) {
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        name = getString(jsonObject,"name","John");
+        firstName = getString(jsonObject,"firstName","Do");
+        grade = getString(jsonObject,"grade",GRADES.get(0));
+        JSONArray array = getJSONArray(jsonObject,"taughtModules",new JSONArray());
+        for (int i = 0; i < array.length(); i++) {
+            taughtModules.add(i,getString(array.optJSONObject(i),"id",""));
+        }
         return false;
     }
 
     @Override
     public JSONObject toJSON() {
-        return null;
+        JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("name",name);
+        data.put("firstName",firstName);
+        data.put("grade",grade);
+        JSONArray array = new JSONArray();
+        for (int i = 0; i < taughtModules.size(); i++) {
+            array.put(i,new JSONObject("{id:".concat(taughtModules.get(i)).concat("}")));
+        }
+        data.put("taughtModules",array);
+        return data;
     }
 
 

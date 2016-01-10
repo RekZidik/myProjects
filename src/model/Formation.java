@@ -13,7 +13,6 @@ import java.util.stream.Stream;
 public class Formation extends Model{
     private static final int MAX_SIZE_GROUP =20;
     private static int nbrInstances;
-    private String id;
     private String nomination;
     private int students;
     private ModuleHandler modules;
@@ -100,12 +99,20 @@ public class Formation extends Model{
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        return false;
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        nomination = getString(jsonObject,"nomination",getLabel());
+        students = getInt(jsonObject,"students",0);
+        return true;
     }
 
     @Override
     public JSONObject toJSON() {
         JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("nomination",getNomination());
+        data.put("students",getStudents());
         return data;
     }
 

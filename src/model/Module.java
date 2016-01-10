@@ -29,6 +29,8 @@ public class Module extends Model implements ModuleOption {
         nbrInstances++;
     }
 
+    public Module() {
+    }
 
     @Override
     public void setLabel(String label) {
@@ -93,14 +95,9 @@ public class Module extends Model implements ModuleOption {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) {
-        try {
-
-            setNomination(jsonObject.getString("nomination"));
-            setId(jsonObject.getString("id"));
-        }catch (JSONException e){
-            return false;
-        }
-
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
+        setNomination(getString(jsonObject,"nomination",getLabel()));
         return true;
     }
 

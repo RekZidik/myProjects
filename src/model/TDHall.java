@@ -24,13 +24,8 @@ public class TDHall extends Hall {
 
     @Override
     public JSONObject toJSON() {
-        JSONObject data = super.toJSON();
-        return data;
+        return super.toJSON();
     }
 
-    @Override
-    public void printState() {
-        super.printState();
 
-    }
 }

@@ -99,18 +99,30 @@ public abstract class  Manager<T extends Model> extends Model{
      */
     public abstract boolean remove(T m);
 
+    /**
+     * Remove item from Stream of Model
+     * @return Result of operation
+     */
     public boolean remove(Stream<T> stream){
         flag = false;
         stream.forEach(x->flag &= remove(x));
         return !flag;
     }
 
+    /**
+     * Add item from Stream of Model
+     * @return Result of operation
+     */
     public boolean add(Stream<T> stream){
         flag = false;
         stream.forEach(x->flag &= add(x));
         return !flag;
     }
 
+    /**
+     * @param id identifier of Model object
+     * @return Un Optional object object contain the result of operation
+     */
     public Optional<T> get(String id){
         for (T e: list) {
             if (e.getId().equals(id))

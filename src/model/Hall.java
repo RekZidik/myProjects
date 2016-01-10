@@ -69,6 +69,8 @@ public abstract class Hall extends Model {
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
+        setId(getString(jsonObject,"id",generateId()));
+        setLabel(getString(jsonObject,"label",getLabel()));
         seanceType = getInt(jsonObject,"seanceType",COUR_FLAG);
         capacity = getInt(jsonObject,"capacity",0);
         localisation.fromJSON(getJSONObject(jsonObject,"localisation",new JSONObject()));
@@ -80,6 +82,8 @@ public abstract class Hall extends Model {
     @Override
     public JSONObject toJSON() {
         JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
         data.put("seanceType",seanceType);
         data.put("capacity",capacity);
         data.put("projector",projector);
