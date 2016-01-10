@@ -55,7 +55,7 @@ public class University extends Model{
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        setLabel(getString(jsonObject,"name","UPEC"));
+        setLabel(getString(jsonObject,"name","Unknown"));
         blocks.fromJSONArray(getJSONArray(jsonObject,"blocks",blocks.toJSONArray()));
         formations.fromJSONArray(getJSONArray(jsonObject,"formations",formations.toJSONArray()));
         teachers.fromJSONArray(getJSONArray(jsonObject,"teachers",teachers.toJSONArray()));

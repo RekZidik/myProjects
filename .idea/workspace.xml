@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffe5ab65-ff22-467a-bb1d-b4fd1cbd23a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.uml" afterPath="$PROJECT_DIR$/model.uml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/groupe21/model/University.class" afterPath="$PROJECT_DIR$/out/production/groupe21/model/University.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/groupe21/model/manager/Manager.class" afterPath="$PROJECT_DIR$/out/production/groupe21/model/manager/Manager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.json" afterPath="$PROJECT_DIR$/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SchedulerApp.java" afterPath="$PROJECT_DIR$/src/SchedulerApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/University.java" afterPath="$PROJECT_DIR$/src/model/University.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/manager/Manager.java" afterPath="$PROJECT_DIR$/src/model/manager/Manager.java" />
     </list>
     <ignored path="groupe21.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +31,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SchedulerApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SchedulerApp.java">
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="163" selection-start-line="0" selection-start-column="163" selection-end-line="0" selection-end-column="163" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONObject.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/src/utils/json/json-20151123.jar!/org/json/JSONObject.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.5555553">
+              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+              <folding>
+                <element signature="e#671#672#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="University.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/University.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchedulerApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SchedulerApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33420366">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,264 +96,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormationsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/manager/FormationsManager.java">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controler/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#1479#1480#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/manager/GroupHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlotsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/manager/SlotsManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-              <folding>
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MODULES/mdl-groupe21" pinned="false" current-in-tab="false">
-        <entry file="uml://MODULES/mdl-groupe21">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>MODULES</ID>
-              <OriginalElement>mdl-groupe21</OriginalElement>
-              <nodes>
-                <node x="10.0" y="0.0">mdl-groupe21</node>
-                <node x="0.0" y="80.0">lib-json-20151123</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="mdl-groupe21" target="lib-json-20151123">
-                  <point x="0.0" y="15.0" />
-                  <point x="0.0" y="-15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-179.0" y="138.5" />
-              <SelectedNodes>
-                <node>lib-json-20151123</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Libraries</Category>
-                <Category>Test dependencies</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement />
-              <nodes>
-                <node x="152.0" y="337.701171875">com</node>
-                <node x="0.0" y="262.701171875">netscape</node>
-                <node x="173.0" y="262.701171875">oracle</node>
-                <node x="440.0" y="412.701171875">org</node>
-                <node x="295.0" y="412.701171875">sun</node>
-                <node x="271.8125" y="0.0">META-INF</node>
-                <node x="0.0" y="487.701171875">jdk</node>
-                <node x="302.0" y="337.701171875">view</node>
-                <node x="148.0" y="412.701171875">java</node>
-                <node x="0.0" y="337.701171875">javax</node>
-                <node x="0.0" y="412.701171875">utils</node>
-                <node x="41.8125" y="85.701171875">controler</node>
-                <node x="20.0625" y="5.701171875">model</node>
-                <node x="331.0" y="262.701171875">javafx</node>
-                <node x="71.8125" y="165.701171875">SchedulerApp</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="controler" target="controler">
-                  <point x="0.0" y="15.0" />
-                  <point x="106.3125" y="145.701171875" />
-                  <point x="11.8125" y="145.701171875" />
-                  <point x="11.8125" y="93.201171875" />
-                  <point x="-64.5" y="-7.5" />
-                </edge>
-                <edge source="SchedulerApp" target="controler">
-                  <point x="0.0" y="-26.0" />
-                  <point x="43.0" y="15.0" />
-                </edge>
-                <edge source="controler" target="model">
-                  <point x="0.0" y="-15.0" />
-                  <point x="28.75" y="15.0" />
-                </edge>
-                <edge source="model" target="model">
-                  <point x="-28.75" y="15.0" />
-                  <point x="48.8125" y="55.701171875" />
-                  <point x="0.0625" y="55.701171875" />
-                  <point x="0.0625" y="20.701171875" />
-                  <point x="-57.5" y="-0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.7364705882352941" x="-136.12140575079871" y="155.87859424920129" />
-              <SelectedNodes>
-                <node>SchedulerApp</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Properties</Category>
-                <Category>Methods</Category>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>public</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JAVA/controler" pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/controler">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>controler</OriginalElement>
-              <nodes>
-                <node x="1176.0" y="125.0">controler.BaseController</node>
-                <node x="404.0" y="339.5">controler.ManageFormationsController</node>
-                <node x="39.5" y="453.0">controler.AddModelController.ConfigDisplay</node>
-                <node x="0.0" y="339.5">controler.AddModelController</node>
-                <node x="1124.0" y="339.5">controler.RemoveModelController</node>
-                <node x="1469.0" y="339.5">controler.ManageModelsController</node>
-                <node x="812.0" y="339.5">controler.AddSlotController</node>
-                <node x="1899.0" y="339.5">controler.ManageSlotsController</node>
-                <node x="1212.0" y="0.0">controler.Controller</node>
-                <node x="2237.0" y="328.0">controler.MainMenu</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="controler.ManageSlotsController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="2058.0" y="298.0" />
-                  <point x="1349.642857142857" y="298.0" />
-                  <point x="63.14285714285711" y="71.5" />
-                </edge>
-                <edge source="controler.ManageFormationsController" target="controler.AddModelController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.AddModelController" target="controler.AddModelController.ConfigDisplay">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.ManageFormationsController" target="controler.AddModelController.ConfigDisplay">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.RemoveModelController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="0.0" y="71.5" />
-                </edge>
-                <edge source="controler.AddModelController.ConfigDisplay" target="controler.AddModelController">
-                  <point x="0.0" y="-59.5" />
-                  <point x="0.0" y="26.0" />
-                </edge>
-                <edge source="controler.ManageSlotsController" target="controler.AddSlotController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.AddSlotController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="958.0" y="308.0" />
-                  <point x="1254.9285714285713" y="308.0" />
-                  <point x="-31.57142857142867" y="71.5" />
-                </edge>
-                <edge source="controler.MainMenu" target="controler.ManageModelsController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.ManageFormationsController" target="controler.RemoveModelController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.MainMenu" target="controler.ManageSlotsController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.ManageModelsController" target="controler.RemoveModelController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.MainMenu" target="controler.AddModelController.ConfigDisplay">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.ManageModelsController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="1674.0" y="308.0" />
-                  <point x="1318.0714285714284" y="308.0" />
-                  <point x="31.57142857142844" y="71.5" />
-                </edge>
-                <edge source="controler.BaseController" target="controler.Controller">
-                  <point x="0.0" y="-71.5" />
-                  <point x="0.0" y="37.5" />
-                </edge>
-                <edge source="controler.AddModelController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="192.0" y="288.0" />
-                  <point x="1191.7857142857142" y="288.0" />
-                  <point x="-94.71428571428578" y="71.5" />
-                </edge>
-                <edge source="controler.ManageFormationsController" target="controler.BaseController">
-                  <point x="0.0" y="-26.0" />
-                  <point x="598.0" y="298.0" />
-                  <point x="1223.357142857143" y="298.0" />
-                  <point x="-63.14285714285711" y="71.5" />
-                </edge>
-                <edge source="controler.MainMenu" target="controler.BaseController">
-                  <point x="0.0" y="-37.5" />
-                  <point x="2364.5" y="288.0" />
-                  <point x="1381.2142857142858" y="288.0" />
-                  <point x="94.71428571428578" y="71.5" />
-                </edge>
-                <edge source="controler.ManageModelsController" target="controler.AddModelController.ConfigDisplay">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="controler.ManageModelsController" target="controler.AddModelController">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.8392554991539763" x="405.96774193548384" y="479.96774193548384" />
-              <SelectedNodes>
-                <node>controler.AddModelController.ConfigDisplay</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-                <Category>Properties</Category>
-                <Category>Constructors</Category>
-                <Category>Fields</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>public</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -510,7 +319,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAVA/model.manager" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Formation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/model.manager" pinned="false" current-in-tab="false">
         <entry file="uml://JAVA/model.manager">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
@@ -578,7 +397,7 @@
                   <point x="-92.4375" y="236.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.36480186480186483" x="1276.5" y="418.99999999999994" />
+              <settings layout="Hierarchic Group" zoom="0.36480186480186483" x="574.7492012779553" y="647.8913738019169" />
               <SelectedNodes>
                 <node>model.manager.Manager</node>
               </SelectedNodes>
@@ -590,19 +409,6 @@
               </Categories>
               <SCOPE>All</SCOPE>
               <VISIBILITY>public</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-              <folding>
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -670,15 +476,15 @@
         <option value="$PROJECT_DIR$/src/model/Formation.java" />
         <option value="$PROJECT_DIR$/src/model/Floor.java" />
         <option value="$PROJECT_DIR$/src/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/model/manager/Manager.java" />
         <option value="$PROJECT_DIR$/src/controler/BaseController.java" />
         <option value="$PROJECT_DIR$/src/data" />
         <option value="$PROJECT_DIR$/src/model/Block.java" />
         <option value="$PROJECT_DIR$/src/controler/AddModelController.java" />
-        <option value="$PROJECT_DIR$/src/SchedulerApp.java" />
-        <option value="$PROJECT_DIR$/src/model/University.java" />
         <option value="$PROJECT_DIR$/src/controler/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/model/University.java" />
+        <option value="$PROJECT_DIR$/src/model/manager/Manager.java" />
         <option value="$PROJECT_DIR$/data.json" />
+        <option value="$PROJECT_DIR$/src/SchedulerApp.java" />
       </list>
     </option>
   </component>
@@ -1338,12 +1144,12 @@
       <workItem from="1451042187816" duration="20396000" />
       <workItem from="1451929573466" duration="12869000" />
       <workItem from="1452101231829" duration="32668000" />
-      <workItem from="1452357514250" duration="45252000" />
+      <workItem from="1452357514250" duration="46603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119689000" />
+    <option name="totallyTimeSpent" value="121040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1356,7 +1162,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1365,7 +1171,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1390,11 +1196,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/Formation.java</url>
-          <line>101</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SchedulerApp.java</url>
           <line>20</line>
           <properties />
@@ -1413,25 +1214,19 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SchedulerApp.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SchedulerApp.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controler/MainMenu.java</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/Formation.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1722,106 +1517,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/nio/file/FileSystems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding>
-            <element signature="e#7984#7985#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/nio/file/Paths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="e#2741#2742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/utils/json/json-20151123.jar!/org/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36102235">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/University.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="162" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controler/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SchedulerApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2384,7 +2085,7 @@
               <point x="-92.4375" y="236.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.36480186480186483" x="1276.5" y="418.99999999999994" />
+          <settings layout="Hierarchic Group" zoom="0.36480186480186483" x="574.7492012779553" y="647.8913738019169" />
           <SelectedNodes>
             <node>model.manager.Manager</node>
           </SelectedNodes>
@@ -2396,6 +2097,97 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/nio/file/FileSystems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <element signature="e#7984#7985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/nio/file/Paths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="e#2741#2742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/utils/json/json-20151123.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5555553">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Formation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/University.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/manager/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+          <folding>
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="163" selection-start-line="0" selection-start-column="163" selection-end-line="0" selection-end-column="163" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SchedulerApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33420366">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

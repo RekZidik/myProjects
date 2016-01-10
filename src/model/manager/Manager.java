@@ -53,11 +53,10 @@ public abstract class  Manager<T extends Model> extends Model{
     }
 
     public boolean fromJSONArray(JSONArray array){
-        Iterator iterator = array.iterator();
         boolean result=true;
-        while (iterator.hasNext()){
+        for (int i = 0; i < array.length(); i++) {
             T item = getModelInstance();
-            result=result && item.fromJSON((JSONObject) iterator.next());
+            result=result && item.fromJSON(array.getJSONObject(i)) && add(item);
         }
         return result;
     }

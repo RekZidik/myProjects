@@ -25,7 +25,6 @@ public class SchedulerApp {
             jsonText="{}";
         }
         try {
-            System.out.println(jsonText);
             jsonObject = new JSONObject(jsonText);
 
         }catch (JSONException e) {
