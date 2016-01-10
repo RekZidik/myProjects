@@ -27,7 +27,6 @@ public class University extends Model{
         slots = new SlotsManager();
     }
 
-
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -35,8 +34,8 @@ public class University extends Model{
 
     @Override
     public void setId(String id) {
-
     }
+
 
     public BlocksManager getBlocks() {
         return blocks;

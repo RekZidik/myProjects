@@ -43,6 +43,7 @@ public abstract class BaseController<T extends Model> implements Controller {
 
     @Override
     public final void interact() {
+        savingState();
         printStatModel();
         printMenu();
         if(hook)
@@ -62,6 +63,10 @@ public abstract class BaseController<T extends Model> implements Controller {
             getFather().get().interact();
         else
             interact();
+    }
+
+    protected  void savingState(){
+
     }
 
     protected void setHook(boolean hook){

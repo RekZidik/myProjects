@@ -4,6 +4,10 @@ import model.Block;
 import model.Teacher;
 import model.University;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
 
 /**
  * Created by RekZidik on 07/01/2016.
@@ -21,7 +25,6 @@ public class MainMenu extends BaseController<University> {
 
     @Override
     public void printMenu() {
-        //getModel().printState();
         System.out.println("1: Manage Formations.");
         System.out.println("2: Manage Teachers.");
         System.out.println("3: Manage Blocks.");
@@ -62,5 +65,19 @@ public class MainMenu extends BaseController<University> {
         }
         return false;
 
+    }
+
+    @Override
+    protected void savingState() {
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("data.json", "UTF-8");
+            System.out.println("Check Point(Work Saved)");
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+            System.out.println("Check Point(Work Not Saved)");
+        }
+        writer.print(University.getInstance().toJSON().toString());
+        writer.close();
     }
 }

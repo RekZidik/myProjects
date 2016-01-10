@@ -31,28 +31,31 @@ public class AddModelController<T extends Model> extends BaseController<Manager<
     @Override
     protected boolean interact(String response) {
         String[] tab = matcher.group(1).split(config.getSeparator());
-        Constructor<?> constructor ;
-        T element=null;
-        try {
-            constructor = Model.class.getConstructor();
+        if (!(matcher.group(1)==null)) {
+            Constructor<?> constructor;
+            T element = null;
+            try {
+                constructor = Model.class.getConstructor();
 
-            for (Constructor<?> e : getModel().getModelInstance().getClass().getConstructors()){
-                if(e.getParameterCount() > 0){
-                    constructor = e;
-                    break;
+                for (Constructor<?> e : getModel().getModelInstance().getClass().getConstructors()) {
+                    if (e.getParameterCount() > 0) {
+                        constructor = e;
+                        break;
+                    }
                 }
+                element = (T) constructor.newInstance(tab);
+            } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+                e.printStackTrace();
             }
-            element = (T) constructor.newInstance(tab);
-        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
-            e.printStackTrace();
-        }
-        if(!getModel().add(element)) {
-            printErrorMessage();
-            return false;
-        }
+            if (!getModel().add(element)) {
+                printErrorMessage();
+                return false;
+            }
 
-        printSuccessMessage();
-        return true;
+            printSuccessMessage();
+            return true;
+        }
+        return false;
     }
 
     @Override

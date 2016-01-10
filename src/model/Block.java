@@ -73,7 +73,11 @@ public class Block extends Model {
 
     @Override
     public JSONObject toJSON() {
-        return null;
+        JSONObject data = new JSONObject();
+        data.put("label", getLabel());
+        data.put("id",getId());
+        data.put("floors",floors.toJSONArray());
+        return data;
     }
 
     @Override
