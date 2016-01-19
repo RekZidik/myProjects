@@ -3,6 +3,7 @@ package model.manager;
 import model.Formation;
 import model.Group;
 import model.Module;
+import org.json.JSONObject;
 
 /**
  * Created by RekZidik on 05/01/2016.
@@ -24,8 +25,8 @@ public class ModuleHandler extends Manager<Module>{
     }
 
     @Override
-    public Module getModelInstance() {
-        return new Module(formation,"Unknown",false,new Module.StudiesHours(6,6,6));
+    public Module getModelInstance(JSONObject data) {
+        return new Module();
     }
 
     @Override
@@ -37,4 +38,6 @@ public class ModuleHandler extends Manager<Module>{
     public boolean remove(Module m) {
         return _remove(m);
     }
+
+
 }

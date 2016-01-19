@@ -5,7 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.stream.Stream;
 
 /**
  * Object represent the teacher in our Model
@@ -40,6 +40,17 @@ public class Teacher extends Model {
         this.taughtModules = new ArrayList<>();
     }
 
+    public Teacher(String[] tab) {
+        this.name = tab[0];
+        this.firstName = tab[1];
+        try {
+            this.grade = GRADES.get(Integer.valueOf(tab[2]));
+        }catch (IndexOutOfBoundsException e){
+            this.grade = GRADES.get(0);
+        }
+        this.taughtModules = new ArrayList<>();
+    }
+
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -65,8 +76,29 @@ public class Teacher extends Model {
         return grade;
     }
 
-    public Iterator<String> getTaughtModulesID() {
-        return taughtModules.iterator();
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public boolean addModule(String m){
+        if(taughtModules.indexOf(m)>=0){
+            taughtModules.add(m);
+            return true;
+        }
+        return false;
+    }
+
+
+    public Stream<String> getTaughtModulesID() {
+        return taughtModules.stream();
     }
 
     @Override
@@ -80,7 +112,7 @@ public class Teacher extends Model {
         for (int i = 0; i < array.length(); i++) {
             taughtModules.add(i,getString(array.optJSONObject(i),"id",""));
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -93,7 +125,7 @@ public class Teacher extends Model {
         data.put("grade",grade);
         JSONArray array = new JSONArray();
         for (int i = 0; i < taughtModules.size(); i++) {
-            array.put(i,new JSONObject("{id:".concat(taughtModules.get(i)).concat("}")));
+            array.put(i,new JSONObject("{\"id\":\"".concat(taughtModules.get(i)).concat("\"}")));
         }
         data.put("taughtModules",array);
         return data;

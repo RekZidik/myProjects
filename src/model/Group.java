@@ -19,10 +19,16 @@ public class Group extends Model {
     private int type;
     private int index;
 
-    public Group(Module module, int type, int index) {
+    public Group(Module module, int type) {
         this.module = module;
         this.type = type;
-        this.index = index;
+        this.index = (int) module.stream().filter(x->x.getIndex()!=COUR_GROUP).count()/2 + 1;
+    }
+
+    public Group(String... tab){
+        this.module = University.getInstance().getFormations().getModule(tab[0]).get();
+        this.type = Integer.parseInt(tab[1]);
+        this.index = (int) module.stream().filter(x->x.getIndex()!=COUR_GROUP).count()/2 + 1;
     }
 
     public static String translateType(int type){
@@ -39,6 +45,7 @@ public class Group extends Model {
     }
 
     public Group() {
+        fromJSON(new JSONObject());
     }
 
     public Module getModule() {
@@ -92,9 +99,10 @@ public class Group extends Model {
 
     @Override
     public void printState() {
+        System.out.print("Ref: ".concat(getId()));
         if(type==COUR_GROUP)
-            System.out.print("Cour Group");
+            System.out.print(" Cour Group");
         else
-            System.out.print("Group".concat(String.valueOf(index)));
+            System.out.print(" Group".concat(String.valueOf(index)));
     }
 }

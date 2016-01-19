@@ -1,8 +1,10 @@
 package controler;
 
 import model.Block;
+import model.Formation;
 import model.Teacher;
 import model.University;
+import model.manager.FormationsManager;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -18,6 +20,7 @@ public class MainMenu extends BaseController<University> {
     public MainMenu(Controller father,University university) {
         super(father,university);
         setHook(false);
+        activateSaveMode();
     }
 
 
@@ -36,7 +39,7 @@ public class MainMenu extends BaseController<University> {
     protected boolean interact(String response) {
         switch (Integer.valueOf(response)){
             case 1:
-                (new ManageModelsController<>(
+                (new ManageFormationsController(
                         this,
                         getModel().getFormations(),
                         new AddModelController.ConfigDisplay("^([\\w\\s]+/[\\d]+)|([\\d])$","Formation naming/Students","/"))
@@ -44,21 +47,31 @@ public class MainMenu extends BaseController<University> {
                 return true;
 
             case 2:
-                (new ManageModelsController<>(
+                (new ManageTeachersController(
                         this,
                         getModel().getTeachers(),
-                        new AddModelController.ConfigDisplay("^(([\\w\\s]+/){2}[\\w\\s]+)|([\\d])$","Name/First name/Grade","/"))
+                        new AddModelController.ConfigDisplay("^(([\\w\\s]+/){2}[\\d]+)|([\\d])$","Name/First Name/Grade(N°)","/"))
                 ).interact();
                 return true;
+
             case 3:
-                (new ManageModelsController<>(
+                (new ManageBlocksController(
                         this,
                         getModel().getBlocks(),
-                        new AddModelController.ConfigDisplay("^([\\w\\s]+)|([\\d])$","Label","/"))
+                        new AddModelController.ConfigDisplay("^([\\w\\s]+/[\\d]+)|([\\d])$","Label/Number of levels","/"))
                 ).interact();
                 return true;
+
             case 4:
-                (new ManageSlotsController(this,getModel().getSlots())).interact();
+                //TODO implementer la gestion des créneaux
+                return true;
+
+            case 5:
+                //TODO implementer le travail de gestion d'une salle en selectionnant le niveau auquel elle appartient
+                return true;
+
+            case 6:
+                //TODO implementer le travail de gestion d'un module en selectionnant le niveau auquel elle appartient
                 return true;
 
 
@@ -67,17 +80,4 @@ public class MainMenu extends BaseController<University> {
 
     }
 
-    @Override
-    protected void savingState() {
-        PrintWriter writer = null;
-        try {
-            writer = new PrintWriter("data.json", "UTF-8");
-            System.out.println("Check Point(Work Saved)");
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
-            e.printStackTrace();
-            System.out.println("Check Point(Work Not Saved)");
-        }
-        writer.print(University.getInstance().toJSON().toString());
-        writer.close();
-    }
 }

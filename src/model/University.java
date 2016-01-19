@@ -18,7 +18,6 @@ public class University extends Model{
     private FormationsManager formations;
     private TeachersManager teachers;
     private SlotsManager slots;
-    private String name;
 
     private University() {
         blocks = new BlocksManager();
@@ -55,7 +54,7 @@ public class University extends Model{
 
     @Override
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
-        setLabel(getString(jsonObject,"name","Unknown"));
+        setLabel(getString(jsonObject,"name","UPEC"));
         blocks.fromJSONArray(getJSONArray(jsonObject,"blocks",blocks.toJSONArray()));
         formations.fromJSONArray(getJSONArray(jsonObject,"formations",formations.toJSONArray()));
         teachers.fromJSONArray(getJSONArray(jsonObject,"teachers",teachers.toJSONArray()));
@@ -79,9 +78,9 @@ public class University extends Model{
 
         System.out.println(getLabel());
         System.out.print("Formations : ".concat(String.valueOf(getFormations().length())));
-        System.out.print("Blocks : ".concat(String.valueOf(getBlocks().length())));
-        System.out.print("Teachers : ".concat(String.valueOf(getTeachers().length())));
-        System.out.print("Students : ");
+        System.out.print(" Blocks : ".concat(String.valueOf(getBlocks().length())));
+        System.out.print(" Teachers : ".concat(String.valueOf(getTeachers().length())));
+        System.out.print(" Students : ");
         System.out.println(
                         getFormations()
                         .stream().mapToInt(Formation::getStudents)

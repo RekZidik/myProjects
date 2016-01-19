@@ -1,8 +1,13 @@
 package controler;
 
 import model.Model;
+import model.University;
 import model.manager.Manager;
+import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -13,10 +18,11 @@ import java.util.regex.Pattern;
  */
 public abstract class BaseController<T extends Model> implements Controller {
     public static final int BACK_INPUT = 0;
-
+    public static final String CHOICE_MENU_REGEX = "^\\d$";
     private Optional<Controller> father;
     private T model;
     private boolean hook;
+    private boolean saveMode;
     private String regexResponse;
     protected Matcher matcher;
 
@@ -25,7 +31,8 @@ public abstract class BaseController<T extends Model> implements Controller {
         this.father = Optional.ofNullable(father);
         this.model = model;
         this.hook = true;
-        this.regexResponse = "^\\d$";
+        saveMode = false;
+        this.regexResponse = CHOICE_MENU_REGEX;
     }
 
     @Override
@@ -43,8 +50,9 @@ public abstract class BaseController<T extends Model> implements Controller {
 
     @Override
     public final void interact() {
-        savingState();
         printStatModel();
+        if (saveMode)
+            savingState();
         printMenu();
         if(hook)
             System.out.println("0: Previous.");
@@ -66,7 +74,16 @@ public abstract class BaseController<T extends Model> implements Controller {
     }
 
     protected  void savingState(){
-
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("data.json", "UTF-8");
+            System.out.println("Check Point(Work Saved)");
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+            System.out.println("Check Point(Work Not Saved)");
+        }
+        writer.print(University.getInstance().toJSON().toString());
+        writer.close();
     }
 
     protected void setHook(boolean hook){
@@ -97,7 +114,11 @@ public abstract class BaseController<T extends Model> implements Controller {
     }
 
     protected <S extends Model>String getNameModel(Manager<S> manager){
-        String[] name = manager.getModelInstance().getClass().getName().split("\\.");
+        String[] name = manager.getModelInstance(new JSONObject()).getClass().getName().split("\\.");
         return name[name.length-1];
+    }
+
+    protected void activateSaveMode(){
+        saveMode = true;
     }
 }

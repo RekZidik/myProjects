@@ -3,6 +3,7 @@ package model.manager;
 import model.Block;
 import model.Floor;
 import model.Hall;
+import org.json.JSONObject;
 
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -49,8 +50,8 @@ public class BlocksManager extends Manager<Block> {
     }
 
     @Override
-    public Block getModelInstance() {
-        return new Block(getLabel());
+    public Block getModelInstance(JSONObject data) {
+        return new Block(getLabel(),1);
     }
 
     @Override

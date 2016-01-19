@@ -15,14 +15,27 @@ public class Floor extends Model {
 
     private Block block;
     private HallsHandler halls;
+    private int index;
 
     public Floor(String label,Block block) {
         this.label = block.getLabel().concat("_").concat(label);
         this.block = block;
         this.halls = new HallsHandler(this);
+        this.index = (int) block.streamFloors().count();
     }
 
     public Floor() {
+    }
+
+    public Floor(String[] tab){
+        this.block = University.getInstance().getBlocks().get(tab[1]).orElse(new Block("",1));
+        this.label = block.getLabel().concat("_").concat(tab[0]);
+        this.halls = new HallsHandler(this);
+        this.index = (int) block.streamFloors().count();
+    }
+
+    public int getIndex() {
+        return index;
     }
 
     public Block getBlock() {
@@ -44,6 +57,7 @@ public class Floor extends Model {
     public Iterator<Hall> hallIterator(){
         return halls.iterator();
     }
+
     @Override
     public void setLabel(String label) {
         this.label = label;
@@ -60,7 +74,8 @@ public class Floor extends Model {
     public boolean fromJSON(JSONObject jsonObject) throws JSONException {
         setId(getString(jsonObject,"id",generateId()));
         setLabel(getString(jsonObject,"label",getLabel()));
-        block.fromJSON(getJSONObject(jsonObject,"block",new JSONObject()));
+        index = getInt(jsonObject,"index",0);
+        block = University.getInstance().getBlocks().get(getString(jsonObject,"block","")).orElseGet(null);
         halls.fromJSONArray(getJSONArray(jsonObject,"halls",new JSONArray()));
         return true;
     }
@@ -70,13 +85,16 @@ public class Floor extends Model {
         JSONObject data = new JSONObject();
         data.put("label", getLabel());
         data.put("id",getId());
-        data.put("block",block.toJSON());
+        data.put("index",index);
+        data.put("block",block.getId());
         data.put("halls",halls.toJSONArray());
         return data;
     }
 
     @Override
     public void printState() {
-
+        System.out.println("Ref : ".concat(getId()));
+        System.out.print(getLabel());
+        System.out.println("  level : ".concat(String.valueOf(getIndex())));
     }
 }

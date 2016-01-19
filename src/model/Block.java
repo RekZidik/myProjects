@@ -14,17 +14,34 @@ import java.util.stream.Stream;
 public class Block extends Model {
     private FloorsHandler floors ;
 
-    public Block(String label) {
+    public Block(String label, int height) {
         this.label = label;
+        initFloors(height);
+    }
+
+    public Block(String[] tab) {
+        this.label = tab[0];
+        initFloors((Integer.valueOf(tab[1])>0)?Integer.valueOf(tab[1]):1);
+    }
+
+    private void initFloors(int length){
         this.floors = new FloorsHandler(this);
+        for (int i = 0; i < length; i++) {
+            floors.add(new Floor("L".concat(String.valueOf(i)),this));
+        }
+    }
+
+    public boolean addFloor(Floor floor){
+        return floors.add(floor);
+    }
+
+    public boolean removeFloor(){
+        floors.unstack();
+        return true;
     }
 
     public Optional<Hall> getHall(String id){
         return floors.getHall(id);
-    }
-
-    public Stream<Hall> streamHall(){
-        return floors.streamHalls();
     }
 
     public Stream<Floor> streamFloors(){
@@ -82,6 +99,7 @@ public class Block extends Model {
 
     @Override
     public void printState() {
+        System.out.println("Ref :".concat(getId()));
         System.out.println(label);
     }
 }

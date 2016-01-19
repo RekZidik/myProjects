@@ -9,10 +9,11 @@ import org.json.JSONObject;
 public class TDHall extends Hall {
 
     public TDHall(int seanceType, int capacity, boolean projector, Floor localisation) {
-        super(seanceType, capacity, projector, localisation);
+        super(localisation, capacity, projector, seanceType);
     }
 
     public TDHall() {
+        fromJSON(new JSONObject());
     }
 
 

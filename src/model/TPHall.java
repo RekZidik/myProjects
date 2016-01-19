@@ -12,7 +12,7 @@ public class TPHall extends Hall{
     private int outlets;
 
     public TPHall(int seanceType, int capacity, boolean projector, Floor localisation, int outlets) {
-        super(seanceType, capacity, projector, localisation);
+        super(localisation, capacity, projector, seanceType );
         this.outlets = outlets;
     }
 
@@ -25,6 +25,11 @@ public class TPHall extends Hall{
     }
 
     public TPHall() {
+    }
+
+    public TPHall(String[] tab) {
+        super(tab);
+        outlets = Integer.valueOf(tab[3]);
     }
 
     @Override

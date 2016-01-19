@@ -8,27 +8,40 @@ import java.util.logging.Level;
 /**
  * Created by RekZidik on 01/12/2015.
  */
-public abstract class Hall extends Model {
+public abstract class Hall extends Model implements HallSpecification {
     private static int nbrInstances = 1;
-    private final int COUR_FLAG= 1;
-    private final int TD_FLAG=10;
-    private final int TP_FLAG=100;
+    public static final int COUR_FLAG= 1;
+    public static final int TD_FLAG=10;
+    public static final int TP_FLAG=100;
 
     private  int seanceType;
     private boolean projector;
     private int capacity;
     private Floor localisation;
 
-    public Hall(int seanceType, int capacity, boolean projector, Floor localisation) {
-        this.seanceType = seanceType;
-        this.projector = projector;
+    public Hall(Floor localisation, int capacity, boolean projector, int seanceType ) {
         this.capacity = capacity;
+        this.projector = projector;
         this.localisation = localisation;
         this.label = localisation.getLabel().concat(String.valueOf(nbrInstances++));
+        this.seanceType = seanceType;
     }
 
     public Hall() {
+        localisation = new Floor();
+        fromJSON(new JSONObject());
     }
+
+    public Hall(String[] tab) {
+        University.getInstance().getBlocks().getFloor(tab[0]).orElse(new Floor());
+        this.capacity = Integer.valueOf(tab[1]);
+        this.projector = Boolean.parseBoolean(tab[2]);
+        this.label = localisation.getLabel().concat(String.valueOf(nbrInstances++));
+        this.seanceType = Integer.valueOf(tab[tab.length-1]);
+        //TODO Continue implementation of constructor
+    }
+
+
 
 
     @Override
@@ -63,7 +76,7 @@ public abstract class Hall extends Model {
         return (seanceType & TP_FLAG) > 0;
     }
 
-    public boolean isValidForCours(){
+    public boolean isValidForCour(){
         return (seanceType & COUR_FLAG) > 0;
     }
 
@@ -73,7 +86,7 @@ public abstract class Hall extends Model {
         setLabel(getString(jsonObject,"label",getLabel()));
         seanceType = getInt(jsonObject,"seanceType",COUR_FLAG);
         capacity = getInt(jsonObject,"capacity",0);
-        localisation.fromJSON(getJSONObject(jsonObject,"localisation",new JSONObject()));
+        localisation = University.getInstance().getBlocks().getFloor(getString(jsonObject,"localisation","")).orElse(new Floor());
         projector = getBoolean(jsonObject,"projector",false);
         label = getString(jsonObject,"label",getLabel());
         return true;
@@ -88,7 +101,7 @@ public abstract class Hall extends Model {
         data.put("capacity",capacity);
         data.put("projector",projector);
         data.put("label",label);
-        data.put("localisation",localisation.toJSON());
+        data.put("localisation",localisation.getId());
         return data;
     }
 

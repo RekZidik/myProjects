@@ -1,47 +1,73 @@
 package controler;
 
-import model.manager.FormationsManager;
+import model.Formation;
+import model.manager.Manager;
+import model.manager.ModuleHandler;
+
+import java.util.Optional;
+import java.util.regex.Pattern;
 
 /**
  * Created by RekZidik on 08/01/2016.
  */
-public class ManageFormationsController extends BaseController<FormationsManager> {
-    public ManageFormationsController(Controller father, FormationsManager model) {
-        super(father, model);
+public class ManageFormationsController extends ManageModelsController<Formation> {
+
+    public ManageFormationsController(Controller father, Manager<Formation> model, AddModelController.ConfigDisplay configDisplay) {
+        super(father, model, configDisplay);
     }
 
     @Override
-    protected void printMenu() {
-        System.out.println("1: Add Formation.");
-        System.out.println("2: Delete Formation.");
-        System.out.println("3: Shows Formations.");
-    }
+    protected boolean forManageItem() {
 
-    @Override
-    protected boolean interact(String response) {
-        switch (Integer.valueOf(response)){
-            case 1:
-                (new AddModelController<>(this,
-                        getModel(),
-                        new AddModelController.ConfigDisplay("^([\\w\\s]+/[\\d]+)|([\\d])$","Formation naming/Students","/"))
-                ).interact();
-                return true;
+        if (basicModel.isPresent()) {
+            pattern = Pattern.compile("[\\w\\s]+");
+            while (true) {
+                System.out.println("Nomination(".concat(basicModel.get().getNomination()).concat(") :"));
+                input = scanner.nextLine();
+                matcher = pattern.matcher(input);
+                if (input.equals("")) break;
+                if (matcher.find()){
+                    basicModel.get().setNomination(input);
+                    break;
+                }
+            }
 
-            case 2:
-                (new RemoveModelController<>(this,getModel())).interact();
-                return true;
+            pattern = Pattern.compile("[\\d]+");
+            while (true) {
+                System.out.println("Students(".concat(String.valueOf(basicModel.get().getStudents())).concat(") :"));
+                input = scanner.nextLine();
+                matcher = pattern.matcher(input);
+                if (input.equals("")) break;
+                if (matcher.find()){
+                    basicModel.get().setStudents(Integer.valueOf(input));
+                    break;
+                }
+            }
 
-            case 3:
-                getModel().printState();
-                interact();
-                return true;
+            pattern = Pattern.compile("[Yes|YES|y|Y]");
+            while (true) {
+                System.out.println("Manage Module (Yes/No) :");
+                input = scanner.nextLine();
+                matcher = pattern.matcher(input);
+                if (input.equals("")) break;
+                if (matcher.find()){
+                    ModuleHandler manager = new ModuleHandler(basicModel.get());
+                    manager.add(basicModel.get().stream());
+                    manager.setLabel(basicModel.get().getLabel().concat(" Modules"));
+                    (new ManageModuleController(this,
+                                                manager,
+                                                new AddModelController.ConfigDisplay(
+                                                        "^((".concat(basicModel.get().getId()).concat(")/[\\w\\s]+/[Y|N](/[\\d]+){4})|([\\d])$")
+                                                        ,"Ref:".concat(basicModel.get().getId()).concat("/Nomination/Optional(Y|N)/Students/TD hours/TP hours/Cour hours")
+                                                        ,"/")))
+                    .interact();
+                    break;
+                }
+            }
+            basicModel = Optional.empty();
         }
 
-        return false;
-    }
-
-    @Override
-    protected void printStatModel() {
-        getModel().printGlobalStat();
+        interact();
+        return true;
     }
 }

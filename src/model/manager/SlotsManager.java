@@ -1,6 +1,7 @@
 package model.manager;
 
 import model.*;
+import org.json.JSONObject;
 
 import java.util.stream.Stream;
 
@@ -34,7 +35,7 @@ public class SlotsManager extends Manager<Slot> {
     }
 
     @Override
-    public Slot getModelInstance() {
+    public Slot getModelInstance(JSONObject data) {
         return new Slot(new Slot.Duration(),new Group(),new Teacher(),new TDHall());
     }
 

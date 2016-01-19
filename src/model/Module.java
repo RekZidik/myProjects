@@ -19,17 +19,33 @@ public class Module extends Model implements ModuleOption {
     private GroupHandler groups;
     private int students;
 
-    public Module(Formation formation,String nomination, boolean optional, StudiesHours hours) {
+    public Module(Formation formation,String nomination,int students, boolean optional, StudiesHours hours) {
         this.formation = formation;
         this.nomination = nomination;
         this.label = generateLabel(nomination);
         this.optional = optional;
         this.hours = hours;
+        setStudents(students);
         this.groups = new GroupHandler(this);
         nbrInstances++;
     }
 
     public Module() {
+        fromJSON(new JSONObject());
+    }
+
+    public Module(String... tab){
+        this.formation = University.getInstance().getFormations().get(tab[0]).get();
+        this.students = formation.getStudents();
+        this.nomination = tab[1];
+        this.label = generateLabel(nomination);
+        this.optional = Boolean.parseBoolean(tab[2]);
+        this.groups = new GroupHandler(this);
+        this.groups.add(new Group(this,Group.COUR_GROUP));
+        if (optional) {
+            setStudents(Integer.parseInt(tab[3]));
+        }
+        this.hours = new StudiesHours(Integer.parseInt(tab[4]),Integer.parseInt(tab[5]),Integer.parseInt(tab[6]));
     }
 
     @Override
@@ -42,6 +58,22 @@ public class Module extends Model implements ModuleOption {
         while (University.getInstance().getFormations().containsModule(id))
             id=generateId();
         this.id = id;
+    }
+
+    public int getStudents() {
+        return students;
+    }
+
+    public void setStudents(int students) {
+        int temp = students - Formation.MAX_SIZE_GROUP * (groups.length()-1);
+        if(temp < 0) {
+            temp = (students % Formation.MAX_SIZE_GROUP > 0) ? students / Formation.MAX_SIZE_GROUP + 1 : students / Formation.MAX_SIZE_GROUP;
+            for (int i = groups.length(); i < temp; i++) {
+                groups.add(new Group(this,Group.TD_GROUP));
+                groups.add(new Group(this,Group.TP_GROUP));
+            }
+        }
+        this.students = students;
     }
 
     public boolean contains(Group group){
@@ -72,7 +104,6 @@ public class Module extends Model implements ModuleOption {
         this.nomination = nomination;
     }
 
-
     public boolean isOptional() {
         return optional;
     }
@@ -98,6 +129,10 @@ public class Module extends Model implements ModuleOption {
         setId(getString(jsonObject,"id",generateId()));
         setLabel(getString(jsonObject,"label",getLabel()));
         setNomination(getString(jsonObject,"nomination",getLabel()));
+        hours.fromJSON(getJSONObject(jsonObject,"hours",hours.toJSON()));
+        setStudents(getInt(jsonObject,"students",1));
+        setOptional(getBoolean(jsonObject,"optional",false));
+        groups.fromJSON(getJSONObject(jsonObject,"groups",groups.toJSON()));
         return true;
     }
 
@@ -106,12 +141,17 @@ public class Module extends Model implements ModuleOption {
         JSONObject data = new JSONObject();
         data.put("label", getLabel());
         data.put("id",getId());
+        data.put("nomination",nomination);
+        data.put("students",getStudents());
+        data.put("hours",hours.toJSON());
+        data.put("optional",optional);
         return data;
     }
 
     @Override
     public void printState() {
-
+        System.out.print(getNomination().concat(" from formation :").concat(getFormation().getNomination()));
+        hours.printState();
     }
 
     public static class StudiesHours extends Model{
@@ -179,7 +219,9 @@ public class Module extends Model implements ModuleOption {
 
         @Override
         public void printState() {
-
+            System.out.print("Cour Hours :".concat(String.valueOf(getCourHs()))
+                     .concat("TD Hours :".concat(String.valueOf(getTDHs())))
+                     .concat("TP Hours :".concat(String.valueOf(getTPHs()))));
         }
     }
 }

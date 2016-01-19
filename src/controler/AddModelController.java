@@ -1,9 +1,8 @@
 package controler;
 
-import model.Formation;
 import model.Model;
-import model.manager.FormationsManager;
 import model.manager.Manager;
+import org.json.JSONObject;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -20,7 +19,6 @@ public class AddModelController<T extends Model> extends BaseController<Manager<
         setHook(false);
         this.config = configDisplay;
         setRegexResponse(config.getRegex());
-        //"^([\\w\\s]+/[\\d]+)|([\\d])$"
     }
 
     @Override
@@ -34,16 +32,28 @@ public class AddModelController<T extends Model> extends BaseController<Manager<
         if (!(matcher.group(1)==null)) {
             Constructor<?> constructor;
             T element = null;
+            JSONObject data ;
             try {
                 constructor = Model.class.getConstructor();
-
-                for (Constructor<?> e : getModel().getModelInstance().getClass().getConstructors()) {
-                    if (e.getParameterCount() > 0) {
-                        constructor = e;
+                try {
+                    data = new JSONObject("{\"seanceType\":" + tab[tab.length - 1]+"}");
+                }catch (IndexOutOfBoundsException e){
+                    data =  new JSONObject();
+                }
+                for (Constructor<?> e : getModel().getModelInstance(data).getClass().getConstructors()) {
+                    if (e.getParameterCount()>0 && e.getParameterTypes()[0].isArray()) {
+//                    System.out.println("Parameter count "+e.getParameterCount()+" isArray"+ e.getParameterTypes()[0].isArray());
+//                        Class<?>[] types = e.getParameterTypes();
+//                        for (int i = 0; i < types.length; i++) {
+//                            flag &= types[i].equals(String.class);
+//                        }
+//                        if (flag)
+                        //&& e.getParameterTypes()[0].isArray()
+                            constructor = e;
                         break;
                     }
                 }
-                element = (T) constructor.newInstance(tab);
+                element = (T) constructor.newInstance(new Object[] {tab});
             } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
                 e.printStackTrace();
             }
@@ -51,7 +61,7 @@ public class AddModelController<T extends Model> extends BaseController<Manager<
                 printErrorMessage();
                 return false;
             }
-
+            savingState();
             printSuccessMessage();
             return true;
         }
@@ -61,6 +71,8 @@ public class AddModelController<T extends Model> extends BaseController<Manager<
     @Override
     protected void printStatModel() {
     }
+
+
 
     public static class ConfigDisplay{
         private String regex;

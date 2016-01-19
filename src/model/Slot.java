@@ -117,7 +117,13 @@ public class Slot extends Model implements OverlapCapacity<Slot>{
     public boolean overlapWith(Slot other) {
         return duration.overlapWith(other.getDuration())
                 &&
-                getGroup().getId().equals(other.getGroup().getId());
+                (
+                                getGroup().getId().equals(other.getGroup().getId())
+                        ||
+                                getHall().getId().equals(other.getHall().getId())
+                        ||
+                                getTeacher().getId().equals(other.getTeacher().getId())
+                );
     }
 
     public static class Duration extends Model implements OverlapCapacity<Duration>{

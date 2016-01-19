@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  * Created by RekZidik on 27/12/2015.
  */
 public class Formation extends Model{
-    private static final int MAX_SIZE_GROUP =20;
+    public static final int MAX_SIZE_GROUP =20;
     private static int nbrInstances;
     private String nomination;
     private int students;
@@ -25,6 +25,18 @@ public class Formation extends Model{
         this.label = generateLabel(nomination);
         setId(generateId());
         nbrInstances++;
+    }
+
+    public Formation(String... tab) {
+        this.nomination = tab[0];
+        setStudents(Integer.valueOf(tab[1]));
+        this.modules = new ModuleHandler(this);
+        this.label = generateLabel(nomination);
+        setId(generateId());
+        nbrInstances++;
+    }
+
+    public Formation() {
     }
 
     public boolean contains(Group group){
@@ -76,8 +88,7 @@ public class Formation extends Model{
     }
 
     public void setStudents(int students) {
-        int temp = (students% MAX_SIZE_GROUP >0)?students/ MAX_SIZE_GROUP +1:students/ MAX_SIZE_GROUP;
-
+        modules.stream().filter(x->!x.isOptional()).forEach(x->x.setStudents(students));
         this.students = students;
     }
 

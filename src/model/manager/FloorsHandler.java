@@ -1,9 +1,12 @@
 package model.manager;
 
+import jdk.nashorn.api.scripting.JSObject;
 import model.Block;
 import model.Floor;
 import model.Hall;
+import org.json.JSONObject;
 
+import java.util.Iterator;
 import java.util.Optional;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
@@ -26,8 +29,12 @@ public class FloorsHandler extends Manager<Floor> {
         return streamHalls().filter(x->x.getId().equals(id)).findFirst();
     }
 
+    public void unstack(){
+        iterator().forEachRemaining(x->{if(x.getIndex()==length()-1) remove(x);});
+    }
+
     @Override
-    public Floor getModelInstance() {
+    public Floor getModelInstance(JSONObject data) {
         return new Floor(block.getLabel().concat(String.valueOf(length())),block);
     }
 

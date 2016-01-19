@@ -3,6 +3,8 @@ package model.manager;
 import model.Formation;
 import model.Group;
 import model.Module;
+import model.University;
+import org.json.JSONObject;
 
 import java.util.Optional;
 import java.util.stream.Collector;
@@ -53,7 +55,7 @@ public class FormationsManager extends Manager<Formation> {
     }
 
     @Override
-    public Formation getModelInstance() {
+    public Formation getModelInstance(JSONObject data) {
         return new Formation(getLabel(),"-1");
     }
 
@@ -64,6 +66,12 @@ public class FormationsManager extends Manager<Formation> {
 
     @Override
     public boolean remove(Formation m) {
-        return _remove(m);
+        return University.getInstance()
+                    .getSlots()
+                    .stream(m)
+                    .filter(x->x.getModule().getFormation().getId().equals(m.getId()))
+                    .count() <= 0
+                &&
+                _remove(m);
     }
 }

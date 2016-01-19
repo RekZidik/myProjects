@@ -55,7 +55,7 @@ public abstract class  Manager<T extends Model> extends Model{
     public boolean fromJSONArray(JSONArray array){
         boolean result=true;
         for (int i = 0; i < array.length(); i++) {
-            T item = getModelInstance();
+            T item = getModelInstance(array.getJSONObject(i));
             result=result && item.fromJSON(array.getJSONObject(i)) && add(item);
         }
         return result;
@@ -84,7 +84,7 @@ public abstract class  Manager<T extends Model> extends Model{
     /**
      *@return an instance of Model object managed
      */
-    public abstract T getModelInstance();
+    public abstract T getModelInstance(JSONObject data);
 
     /**
      * Add item to objects managed
